@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+}
+
+.html{
+    background-color: rgb(255, 255, 255);
+}
+
+.tituloPrincipal{
+    display: flex;
+    height: 100%;
+    font-size: 12;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(73, 96, 116, 0.692);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    text-shadow: 7px 7px 10px black;
+}
+
+/*Barra Menu*/
+.containerMenu{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(37, 59, 100);
+    padding: 0, 10px;
+}
+
+a{
+    color: black;
+}
+
+.menu{
+    margin: auto;
+    height: 100%;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.primerFila{
+    display: flex;
+    height: 100%;
+    padding: 15px;
+    list-style: none;
+    justify-content: center;
+    background-color: rgba(250, 235, 215, 0.493);
+}
+
+.primerFila li{
+    height: 100%;
+    width: 100px;
+    position: relative;
+}
+
+.primerFila li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px, 200px;
+    font-size: 16px;
+    background: rgb(221, 221, 210);
+}
+
+.menu a:hover{
+    transform: scale(1.1);
+    background-color: rgb(219, 131, 15);
+    border-radius: 5px;
+    transition: 1s;
+}
+/*Fin Barra Menu*/
+
+/*SubMenu*/
+.primerFila > li > ul{
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    padding: 5px 5px 5px 7px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(124, 98, 98);
+    list-style-type: none;
+    transition: 0.5s;
+    box-shadow: 5px black;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+}
+
+.primerFila > li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.primerFila > li > ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid rgb(221, 221, 210);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    border-radius: 2px;
+}
+
+.primerFila > li > ul > li{
+    width: 114px;
+    height: 35px;
+    padding-bottom: 5px;
+}
+
+/*SubMenu del apartado Niveles*/
+.primerFila > li > ul > li > a{
+    padding: 7px;
+}
+
+.primerFila > li > ul > li > a:hover{
+    transition: 0.5s;
+    background-color: rgb(219, 131, 15);
+    transform: scale(1.1);
+    visibility: visible;
+    z-index: 9;
+}
+
+.segundoSubmenu{
+    position:absolute;
+    padding-left: 10px;
+    top:-1px;
+    right: -10px;
+    height: inherit;
+    z-index: -1;
+}
+
+.segundoSubmenu li {
+    width: 120px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: -10px;
+    left: 122px;
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(124, 98, 98);
+    list-style-type: none;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 11;
+}
+
+.segundoSubmenu li a{
+    display: flex;
+    height: 30px;
+    text-align: center;
+}
+
+
+.primerFila li:hover > .segundoSubmenu li{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.segundoSubmenu .flechita:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid transparent;
+    border-top: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid rgb(127, 173, 170);
+    position: absolute;
+    top: 14px;
+    left: -20px;
+    border-radius: 2px;
+}
+
+/*Fin SubMenu del apartado Niveles*/
+/*Fin SubMenu*/
+
+/*Aside*/
+.aside_Container{
+    display: flex;
+    position: absolute;
+    background: rgba(255, 255, 0, 0.541);
+    width: 20%;
+    height: 79%;
+}
+/*Fin Aside*/
+
+/*Seccion Principal*/
+.sectionPrincipal{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(61, 61, 167, 0.219);
+    left: 20%;
+    flex: auto;
+    padding: 20px;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+}
+/*Fin Seccion Principal*/
+
+/*Parte Footer*/
+.logos{
+    display: flex;
+    height: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.redesSociales{
+    position: relative;
+    display: flex;
+    background-color: rgba(165, 42, 42, 0.479);
+    text-align:justify;
+    width: 100%;
+    top: auto;
+}
+
+.redesSociales a{
+    padding: 4px;
+}
+
+.contenedorFlechaArriba{
+    position: fixed;
+    width: 7%;
+    bottom: 1%;
+    left: 90%;
+}
+
+.contenedorFlechaArriba p{
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+    bottom: 105%;
+    visibility: hidden;
+}
+
+.contenedorFlechaArriba:hover p{
+    visibility: visible;
+    transition: 0.3s;
+    background-color: rgba(255, 235, 205, 0.76);
+    border-radius: 5px;
+}
+
+.flechaParaArriba{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    right: 1%;
+    bottom: 1%;
+}
+/*Fin Parte Footer*/
+
+/*Pagina Niveles*/
+.contenedorSection{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionInfoNiveles{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(61, 61, 167, 0.219);
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.sectionInfoNiveles p{
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.4;
+}
+
+.ciclos{
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+    background-color: rgba(199, 30, 30, 0.644);
+}
+
+.sectionInfoNiveles h3{
+    width: 80%;
+    background-color: goldenrod;
+    margin: 30px 0px 30px 0px;
+}
+/*Fin Pagina Niveles*/
+
+/*Pagina Galeria*/
+.contenedor{
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 550px 500px;
+    background-color: rgba(18, 29, 29, 0.548);
+    gap: 20px;
+}
+
+.card{
+    border-radius: 10px;
+    margin-left: 5%;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(127, 255, 212, 0.493);
+}
+
+.text{
+    position: absolute;
+    max-width: 400px;
+    top: 25%;
+    left: 27%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    border-radius: 5px;
+    visibility: hidden;
+    z-index: 5;
+    background-color: rgba(127, 255, 212, 0.411);
+}
+
+.card:hover {
+    visibility: visible;
+    background-color: rgb(30, 30, 196);
+    transition: 0.5s;
+}
+
+/*Fin Pagina Galeria*/
+
+/*Pagina Contactanos*/
+.fieldser1{
+    background-color: rgba(95, 158, 160, 0.527);
+}
+/*Fin Pagina Contactanos*/
+@media screen and (max-width: 600px){
+    .columnaPrincipal{
+        flex: 100%;
+    }
+}
