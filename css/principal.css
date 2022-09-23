@@ -15,8 +15,7 @@
     font-size: 12;
     text-align: center;
     justify-content: center;
-    background-color: rgba(73, 96, 116, 0.692);
-    color: rgb(0, 0, 0);
+    background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);    color: rgb(0, 0, 0);
     padding: 15px;
     text-shadow: 7px 7px 10px black;
 }
@@ -25,7 +24,7 @@
 .containerMenu{
     width: 100%;
     height: 60px;
-    background-color: rgb(37, 59, 100);
+    background-image: radial-gradient(circle at 100% 0%, #93e6f8 0, #76dbf4 16.67%, #53cef0 33.33%, #0cc1ed 50%, #00b4ea 66.67%, #00a7e8 83.33%, #009ae5 100%);        padding: 0, 10px;
     padding: 0, 10px;
 }
 
@@ -35,7 +34,7 @@ a{
 
 .menu{
     margin: auto;
-    height: 100%;
+    height: 60px;
 }
 
 .menu nav{
@@ -46,6 +45,7 @@ a{
     display: flex;
     height: 100%;
     padding: 15px;
+    flex-wrap: wrap;
     list-style: none;
     justify-content: center;
     background-color: rgba(250, 235, 215, 0.493);
@@ -53,7 +53,7 @@ a{
 
 .primerFila li{
     height: 100%;
-    width: 100px;
+    width: 115px;
     position: relative;
 }
 
@@ -87,8 +87,7 @@ a{
     left: 10px;
     padding: 5px 5px 5px 7px;
     color: rgb(0, 0, 0);
-    background-color: rgb(124, 98, 98);
-    list-style-type: none;
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);    list-style-type: none;
     transition: 0.5s;
     box-shadow: 5px black;
     visibility: hidden;
@@ -152,9 +151,7 @@ a{
     left: 122px;
     padding: 7px;
     color: rgb(0, 0, 0);
-    background-color: rgb(124, 98, 98);
-    list-style-type: none;
-    transition: 0.5s;
+    background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);    transition: 0.5s;
     visibility: hidden;
     opacity: 0;
     z-index: 11;
@@ -165,7 +162,6 @@ a{
     height: 30px;
     text-align: center;
 }
-
 
 .primerFila li:hover > .segundoSubmenu li{
     visibility: visible;
@@ -194,9 +190,9 @@ a{
 .aside_Container{
     display: flex;
     position: absolute;
-    background: rgba(255, 255, 0, 0.541);
+    background-image: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);    height: 79%;
     width: 20%;
-    height: 79%;
+    height: 86.3%;
 }
 /*Fin Aside*/
 
@@ -205,7 +201,7 @@ a{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(61, 61, 167, 0.219);
+    background-image: linear-gradient(180deg, #9fb7f5 0, #6c90d8 50%, #2c6bbb 100%);
     left: 20%;
     flex: auto;
     padding: 20px;
@@ -246,6 +242,8 @@ a{
 .contenedorFlechaArriba p{
     position: absolute;
     width: 50px;
+    display: flex;
+    flex-direction: row;
     height: 25px;
     padding: 5px;
     text-align: center;
@@ -280,9 +278,7 @@ a{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(61, 61, 167, 0.219);
-    padding: 20px;
-    justify-content: center;
+    background-image: linear-gradient(175deg, #6c90d8 0, #6c90d8 50%, #6c90d8 100%);    justify-content: center;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -356,7 +352,17 @@ a{
 }
 /*Fin Pagina Contactanos*/
 @media screen and (max-width: 600px){
-    .columnaPrincipal{
-        flex: 100%;
+    .containerMenu{
+        width: 100%;
+        height: 100px;
     }
+
+    .sectionPrincipal img{
+        width: 200px;
+    }
+
+    .aside_Container{
+        height: 54.2%;
+    }
+
 }
