@@ -211,62 +211,6 @@ a{
 }
 /*Fin Seccion Principal*/
 
-/*Parte Footer*/
-.logos{
-    display: flex;
-    height: 40px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.redesSociales{
-    position: relative;
-    display: flex;
-    background-color: rgba(165, 42, 42, 0.479);
-    text-align:justify;
-    width: 100%;
-    top: auto;
-}
-
-.redesSociales a{
-    padding: 4px;
-}
-
-.contenedorFlechaArriba{
-    position: fixed;
-    width: 7%;
-    bottom: 1%;
-    left: 94%;
-}
-
-.contenedorFlechaArriba p{
-    position: absolute;
-    width: 50px;
-    display: flex;
-    flex-direction: row;
-    height: 25px;
-    padding: 5px;
-    text-align: center;
-    bottom: 105%;
-    visibility: hidden;
-}
-
-.contenedorFlechaArriba:hover p{
-    visibility: visible;
-    transition: 0.3s;
-    background-color: rgba(255, 235, 205, 0.76);
-    border-radius: 5px;
-}
-
-.flechaParaArriba{
-    height: 50px;
-    width: 50px;
-    border-radius: 30px;
-    right: 1%;
-    bottom: 1%;
-}
-/*Fin Parte Footer*/
-
 /*Pagina Niveles*/
 .contenedorSection{
     position: relative;
@@ -306,24 +250,64 @@ a{
 .contenedor{
     padding: 10px 0;
     display: grid;
-    grid-template-columns: 550px 500px;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
     background-color: rgba(18, 29, 29, 0.548);
-    gap: 20px;
+    gap: 20px 0px;
+    grid-template-areas:
+    "card-1 card-2"
+    "card-3 card-4"
+    "card-5 card-6"
+    "card-7 card-8"
+    ;
 }
 
 .card{
     border-radius: 10px;
     margin-left: 5%;
-    min-height: 200px;
+    min-height: 150px;
     font-weight: bold;
     padding: 10px;
-    position: relative;
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
     background-color: rgba(127, 255, 212, 0.493);
 }
+
+.card-1{
+    grid-area: card-1;
+}
+
+.card-2{
+    grid-area: card-2;
+}
+
+.card-3{
+    grid-area: card-3;
+}
+
+.card-4{
+    grid-area: card-4;
+}
+
+.card-5{
+    grid-area: card-5;
+}
+
+.card-6{
+    grid-area: card-6;
+}
+
+.card-7{
+    grid-area: card-7;
+}
+
+.card-8{
+    grid-area: card-8;
+}
+
 
 .text{
     position: absolute;
@@ -333,7 +317,7 @@ a{
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.521);
     border-radius: 5px;
-    visibility: hidden;
+    visibility: visible;
     z-index: 5;
     background-color: rgba(127, 255, 212, 0.411);
 }
@@ -351,6 +335,89 @@ a{
     background-color: rgba(95, 158, 160, 0.527);
 }
 /*Fin Pagina Contactanos*/
+
+/*Parte Footer*/
+/*.contenedorFooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 25fr;
+    background-color: rgba(165, 42, 42, 0.479);
+}*/
+
+.logos{
+    display: flex;
+    height: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.redesSociales{
+    position: relative;
+    display: flex;
+    background-color: rgba(165, 42, 42, 0.479);
+    text-align:justify;
+    width: 100%;
+    top: auto;
+}
+
+.redesSociales a{
+    padding: 4px;
+}
+
+.contenedorFlechaArriba{
+    position: fixed;
+    width: 7%;
+    right: 1%;
+    bottom: 1%;
+}
+
+.contenedorFlechaArriba p{
+    position: absolute;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+    bottom: 105%;
+    visibility: hidden;
+}
+
+.contenedorFlechaArriba:hover p{
+    visibility: visible;
+    transition: 0.3s;
+    background-color: rgba(255, 235, 205, 0.76);
+    border-radius: 5px;
+}
+
+.flechaParaArriba{
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    right: 1%;
+    bottom: 1%;
+}
+
+/*.contenedorFooter p{
+    position: absolute;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+    bottom: 1%;
+    visibility: visible;
+}*/
+
+.flechaParaArriba:hover p{
+    visibility: visible;
+    transition: 0.3s;
+    background-color: rgba(255, 235, 205, 0.76);
+    border-radius: 5px;
+}
+
+/*Fin Parte Footer*/
+
 @media screen and (max-width: 600px){
     .containerMenu{
         width: 100%;
