@@ -1,0 +1,23 @@
+{
+  "name": "codercurso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioTosini/CoderCurso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnacioTosini/CoderCurso/issues"
+  },
+  "homepage": "https://github.com/IgnacioTosini/CoderCurso#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
