@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="../utils/scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Polivalente de Arte</title>
 </head>
 
 <body>
-    <header class="containerGridHeader">
+    <header class="grid grid-row-2 containerGridHeader">
         <h1 class="tituloPrincipal animate__animated animate__heartBeat" id="tituloPrincipal">Polivalente de Arte</h1>
         <div class="containerMenu">
             <div class="menu">
@@ -51,15 +52,15 @@
     </header>
 
     <main>
-        <div class="contenedor">
-            <img class="card-1 card"src="../img/galeria1.jpeg"><p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card-2 card"src="../img/galeria2.jpeg"><p class="text"></p>
-            <img class="card-3 card"src="../img/galeria3.jpeg"><p class="text"></p>
-            <img class="card-4 card"src="../img/galeria4.jpeg"><p class="text"></p>
-            <img class="card-5 card"src="../img/galeria5.jpeg"><p class="text"></p>
-            <img class="card-6 card"src="../img/galeria6.jpeg"><p class="text"></p>
-            <img class="card-7 card"src="../img/galeria7.jpeg"><p class="text"></p>
-            <img class="card-8 card"src="../img/galeria8.jpeg"><p class="text"></p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 contenedor">
+            <img class="card"src="../img/galeria1.jpeg"><p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <img class="card"src="../img/galeria2.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria3.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria4.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria5.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria6.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria7.jpeg"><p class="text"></p>
+            <img class="card"src="../img/galeria8.jpeg"><p class="text"></p>
         </div>
     </main>
 

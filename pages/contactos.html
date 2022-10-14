@@ -5,41 +5,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="../utils/scss/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Polivalente de Arte</title>
 </head>
+
 <body>
-    <header class="containerGridHeader">
-        <h1 class="tituloPrincipal animate__animated animate__heartBeat" id="tituloPrincipal">Polivalente de Arte</h1>
+    <header class="grid grid-row-2 containerGridHeader">
+        <h1 class="tituloPrincipal animate__animated animate__heartBeat" id="tituloPrincipal">
+            Polivalente de Arte
+        </h1>
         <div class="containerMenu">
             <div class="menu">
                 <nav>
                     <ul class="primerFila">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="./niveles.html">Niveles</a>
-                            <ul><li><a href="./niveles.html#cicloBasico">Ciclo Basico</a>
-                                <ul class="segundoSubmenu">
-                                    <li class="flechita"><a href="./niveles.html#primerAño">Primer Año</a></li>
-                                    <li><a href="./niveles.html#segundoAño">Segundo Año</a></li>
-                                    <li><a href="./niveles.html#tercerAño">Tercer Año</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./niveles.html#cicloSuperior">Ciclo Superior</a>
-                                <ul class="segundoSubmenu">
-                                    <li class="flechita"><a href="./niveles.html#cuartoAño">Cuarto Año</a></li>
-                                    <li><a href="./niveles.html#quintoAño">Quinto Año</a></li>
-                                    <li><a href="./niveles.html#sextoAño">Sexto Año</a></li>
-                                </ul>
-                            </li>
+                        <li>
+                            <a href="./niveles.html">Niveles</a>
+                            <ul>
+                                <li>
+                                    <a href="./niveles.html#cicloBasico">Ciclo Basico</a>
+                                    <ul class="segundoSubmenu">
+                                        <li class="flechita">
+                                            <a href="./niveles.html#primerAño">Primer Año</a>
+                                        </li>
+                                        <li>
+                                            <a href="./niveles.html#segundoAño">Segundo Año</a>
+                                        </li>
+                                        <li><a href="./niveles.html#tercerAño">Tercer Año</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="./niveles.html#cicloSuperior">Ciclo Superior</a>
+                                    <ul class="segundoSubmenu">
+                                        <li class="flechita">
+                                            <a href="./niveles.html#cuartoAño">Cuarto Año</a>
+                                        </li>
+                                        <li><a href="./niveles.html#quintoAño">Quinto Año</a></li>
+                                        <li><a href="./niveles.html#sextoAño">Sexto Año</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="./galeriaDeFotos.html">Galeria</a></li>
-                        <li><a href="especialidades.html">Especialidades</a>
+                        <li>
+                            <a href="especialidades.html">Especialidades</a>
                             <ul>
-                                <li><a href="./especialidades.html#artesVisuales">Artes Visuales</a>
-                                <li><a href="./especialidades.html#musica">Musica</a>
-                                <li><a href="./especialidades.html#danza">Danza</a>
+                                <li>
+                                    <a href="./especialidades.html#artesVisuales">Artes Visuales</a>
+                                </li>
+                                <li><a href="./especialidades.html#musica">Musica</a></li>
+                                <li><a href="./especialidades.html#danza">Danza</a></li>
                             </ul>
                         </li>
                         <li><a href="./contactos.html">Contactanos</a></li>
@@ -49,79 +66,62 @@
         </div>
     </header>
 
-        <div class="contenedorFormulario">
-            <h1 class="logoForm">Contactanos</h1>
-            <div class="contenedorContacto animated bounceInUp">
-                <div class="contact-form">
-                    <form>
-                        <p>
-                            <label>Nombre Completo</label>
-                            <input type="text" name="nombreCompleto">
-                        </p>
-                        <p>
-                            <label>Correo Electronico</label>
-                            <input type="email" name="email">
-                        </p>
-                        <p>
-                            <label>Número de Telefono</label>
-                            <input type="tel" name="tel">
-                        </p>
-                        <p>
-                            <label>Asunto</label>
-                            <input type="text" name="Asunto">
-                        </p>
-                        <p class="bloque">
+    <div class="contenedorFormulario">
+        <h1 class="logoForm">Contactanos</h1>
+        <div class="contenedorContacto animated bounceInUp">
+            <div class="contact-form">
+                <form>
+                    <p>
+                        <label>Nombre Completo</label>
+                        <input type="text" name="nombreCompleto" />
+                    </p>
+                    <p>
+                        <label>Correo Electronico</label>
+                        <input type="email" name="email" />
+                    </p>
+                    <p>
+                        <label>Número de Telefono</label>
+                        <input type="tel" name="tel" />
+                    </p>
+                    <p>
+                        <label>Asunto</label>
+                        <input type="text" name="Asunto" />
+                    </p>
+                    <p class="bloque">
                         <label>Mensaje</label>
-                            <textarea name="message" rows="3"></textarea>
-                        </p>
-                        <p class="bloque">
-                            <button>
-                                Enviar
-                            </button>
-                        </p>
-                    </form>
-                </div>
-                <div class="infoContacto">
-                    <h4>Más Información</h4>
-                    <ul>
-                        <li>Instituto Polivalente</li>
-                        <li>PolivalentedeArteMdq.com</li>
-                    </ul>
-                </div>
+                        <textarea name="message" rows="3"></textarea>
+                    </p>
+                    <p class="bloque">
+                        <button>Enviar</button>
+                    </p>
+                </form>
+            </div>
+            <div class="infoContacto">
+                <h4>Más Información</h4>
+                <ul>
+                    <li>Instituto Polivalente</li>
+                    <li>PolivalentedeArteMdq.com</li>
+                </ul>
             </div>
         </div>
-        <!--<fieldset class="fieldser1">
-            <legend>Informacion Personal</legend>
-        <label for="nombre">Sexo:</label><br>
-        <label for="nombre" >Hombre</label>
-        <input type="radio" name="sexo" value="hombre"/>
-        <label for="nombre" >Mujer</label>
-        <input type="radio" name="sexo" value="mujer"/>
-        <br><br><label for="nombre" >Nombre:</label>
-        <input type="text" name="nombre" placeholder="Nombre"/><br><br>
-        <label for="apellido" >Apellido:</label>
-        <input type="text" name="apellido" placeholder="Apellido"/>
-        <br><br><label for="talles">Talles:</label>
-        <select name="talles">
-            <option value="L">Large</option>
-            <option value="M">Medium</option>
-            <option value="S">Small</option>
-        </select>
-        <br><br><input type="submit" name="acepta" value="Enviar">
-    </fieldset>-->
+    </div>
 
     <footer>
         <div class="containerGridFooter">
             <ul class="redesSociales">
-                <a target="_blank" href="https://www.facebook.com/PolivalentedeArteMdq"><img class="logos" src="../img/logoFacebook.png"> </a>
-                <a target="_blank" href="https://www.instagram.com/polivalentemdp.oficial/"><img class="logos" src="../img/logoIg.jpg"></a>
+                <a target="_blank" href="https://www.facebook.com/PolivalentedeArteMdq"><img class="logos"
+                        src="../img/logoFacebook.png" />
+                </a>
+                <a target="_blank" href="https://www.instagram.com/polivalentemdp.oficial/"><img class="logos"
+                        src="../img/logoIg.jpg" /></a>
             </ul>
         </div>
         <div class="contenedorFlechaArriba">
-            <a href="#tituloPrincipal"><img class="flechaParaArriba" src="../img/flechaParaArriba.png"><p>Inicio</p></a>
+            <a href="#tituloPrincipal"><img class="flechaParaArriba" src="../img/flechaParaArriba.png" />
+                <p>Inicio</p>
+            </a>
         </div>
     </footer>
-
 </body>
 
 </html>
