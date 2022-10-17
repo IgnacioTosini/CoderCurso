@@ -5,10 +5,6 @@
   font-family: "Vollkorn";
 }
 
-.html {
-  background-color: rgb(255, 255, 255);
-}
-
 /*.containerGridHeader {
     position: relative;
     height: 135px;
@@ -381,6 +377,13 @@ a {
 }
 .containerGridMain .aside_Container {
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.containerGridMain .aside_Container h3 {
+  font-size: x-large;
+  text-align: center;
+  background: #1f4037; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .containerGridMain .sectionPrincipal {
   display: flex;
@@ -884,6 +887,12 @@ form::placeholder*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
+  /*.contenedorFlechaArriba {
+      position: fixed;
+      width: 7%;
+      right: 30%;
+      bottom: 17%;
+  }*/
 }
 @media screen and (max-width: 320px) {
   .containerGridHeader {
@@ -913,11 +922,11 @@ form::placeholder*/
     position: fixed;
     width: 7%;
     right: 30%;
-    bottom: 1%;
+    bottom: 4%;
   }
   .flechaParaArriba {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 30px;
     right: 1%;
     bottom: 1%;
