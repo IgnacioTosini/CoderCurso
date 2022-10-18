@@ -915,7 +915,7 @@ form::placeholder*/
   .contenedorFlechaArriba {
     position: fixed;
     width: 9%;
-    right: 15%;
+    right: 10%;
     bottom: 3%;
   }
 }
