@@ -388,7 +388,7 @@ a {
     border-bottom: 12px solid transparent;
     border-top: 12px solid transparent;
     border-left: 12px solid transparent;
-    border-right: 12px solid rgb(127, 173, 170);
+    border-right: 12px solid rgb(221, 221, 210);
     position: absolute;
     top: 14px;
     left: -20px;
@@ -932,6 +932,35 @@ form::placeholder*/
         font-size: 20px;
     }
 
+    .segundoSubmenu {
+        top: 88px;
+        right: 120px;
+        height: inherit;
+        z-index: -1;
+    }
+
+    .segundoSubmenu .flechita:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        border-right: 12px solid rgb(221, 221, 210);
+        position: absolute;
+        top: -63px;
+        left: 20px;
+        visibility: hidden;
+        border-radius: 2px;
+    }
+
+    .cicloSuperior{
+        top: 53px;
+    }
+
+    .flechita{
+        visibility: hidden;
+    }
+
     /*Parte Footer*/
     .contenedorFlechaArriba {
         position: fixed;
@@ -984,12 +1013,12 @@ form::placeholder*/
         ;
     }
 
-    /*.contenedorFlechaArriba {
+    .contenedorFlechaArriba {
         position: fixed;
-        width: 7%;
-        right: 30%;
-        bottom: 17%;
-    }*/
+        width: 9%;
+        right: 15%;
+        bottom: 3%;
+    }
 
 }
 
@@ -1010,7 +1039,7 @@ form::placeholder*/
     }
 
     .tituloPrincipal {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     /*Parte Footer*/
@@ -1028,8 +1057,8 @@ form::placeholder*/
 
     .contenedorFlechaArriba {
         position: fixed;
-        width: 7%;
-        right: 30%;
+        width: 9%;
+        right: 10%;
         bottom: 4%;
     }
 
