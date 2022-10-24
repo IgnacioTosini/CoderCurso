@@ -381,9 +381,14 @@ a {
 .containerGridMain .aside_Container h3 {
   font-size: x-large;
   text-align: center;
-  background: #1f4037; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1f4037;
+  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+  background: linear-gradient(to right, #99f2c8, #1f4037);
+}
+.containerGridMain .aside_Container p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 20px 0 20px;
 }
 .containerGridMain .sectionPrincipal {
   display: flex;
@@ -411,6 +416,7 @@ a {
 }
 .contenedorSection .sectionInfo .ciclos {
   width: 100%;
+  font-size: 1.6rem;
   margin: 0px 0px 30px 0px;
   background-color: rgba(199, 30, 30, 0.644);
 }
@@ -478,18 +484,23 @@ a {
   width: 100%;
 }
 .contenedorSection .sectionInfo .ciclos {
-  width: 100%;
-  margin: 0px 0px 30px 0px;
+  width: 90%;
+  margin: 30px 0px 25px 0px;
   background-color: rgba(199, 30, 30, 0.644);
 }
 .contenedorSection .sectionInfo h3 {
   width: 80%;
   background-color: goldenrod;
+  font-size: 1.3rem;
   margin: 30px 0px 30px 0px;
 }
 .contenedorSection .sectionInfo p {
-  /*font-family: "Times New Roman";*/
-  line-height: 1.4;
+  font-family: "Times New Roman";
+  line-height: 1.5;
+  font-size: 1.1em;
+  color: #fff;
+  vertical-align: middle;
+  margin: 0px 70px 0px 70px;
 }
 
 /*Fin Pagina Especialidades*/
