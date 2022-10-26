@@ -1,0 +1,57 @@
+/*Parte Footer*/
+.containerGridFooter {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "redesSociales";
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+.logos {
+    display: flex;
+    height: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.redesSociales {
+    grid-area: redesSociales;
+    display: flex;
+    text-align: justify;
+    a {
+        padding: 4px;
+    }
+}
+
+.contenedorFlechaArriba {
+    position: fixed;
+    width: 7%;
+    right: 0%;
+    bottom: 1%;
+    p {
+        position: absolute;
+        width: 50px;
+        height: 28px;
+        bottom: 110%;
+        right: 50%;
+        padding: 5px;
+        visibility: hidden;
+    }
+    &:hover p {
+        visibility: visible;
+        transition: 0.3s;
+        background-color: rgba(255, 235, 205, 0.76);
+        border-radius: 5px;
+    }
+}
+
+.flechaParaArriba {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    right: 1%;
+    bottom: 1%;
+}
+
+/*Fin Parte Footer*/

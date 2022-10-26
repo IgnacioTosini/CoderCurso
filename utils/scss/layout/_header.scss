@@ -1,0 +1,205 @@
+.containerGridHeader {
+    position: relative;
+    height: 135px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "tituloPrincipal" "containerMenu";
+}
+
+.tituloPrincipal {
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    text-shadow: 7px 7px 10px black;
+    grid-area: tituloPrincipal;
+}
+
+/*Barra Menu*/
+.containerMenu {
+    position: absolute;
+    grid-area: containerMenu;
+    height: 100%;
+    width: 100%;
+    background: #2c3e50;
+
+    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);
+
+    background: linear-gradient(to right, #3498db, #2c3e50);
+
+    padding: 0, 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.primerFila li a:link {
+    background: rgba(0, 179, 219, 0.662745098);
+    background: -webkit-linear-gradient(to right, rgba(0, 132, 176, 0.5137254902), rgba(0, 179, 219, 0.5490196078));
+    background: linear-gradient(to right, rgba(0, 132, 176, 0.5882352941), rgba(0, 179, 219, 0.5058823529));
+}
+
+.menu {
+    margin: auto;
+    height: 60px;
+
+    nav {
+        height: 100%;
+    }
+}
+
+.primerFila {
+    display: flex;
+    height: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+
+    li {
+        height: 100%;
+        width: 115px;
+        position: relative;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 5px, 200px;
+            font-size: 16px;
+            background: rgb(221, 221, 210);
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: rgb(219, 131, 15);
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    >li {
+        >ul {
+            width: 128px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 45px;
+            left: 10px;
+            padding: 5px 5px 5px 7px;
+            color: rgb(0, 0, 0);
+            background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+            list-style-type: none;
+            transition: 0.5s;
+            box-shadow: 5px black;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        &:hover>ul {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        >ul {
+            &:before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-bottom: 12px solid rgb(221, 221, 210);
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                position: absolute;
+                top: -12px;
+                left: 20px;
+                border-radius: 2px;
+            }
+
+            >li {
+                width: 114px;
+                height: 35px;
+                padding-bottom: 5px;
+
+                >a {
+                    padding: 7px;
+
+                    &:hover {
+                        transition: 0.5s;
+                        background-color: rgb(219, 131, 15);
+                        transform: scale(1.1);
+                        visibility: visible;
+                        z-index: 9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Fin Barra Menu*/
+/*SubMenu*/
+/*SubMenu del apartado Niveles*/
+.segundoSubmenu {
+    position: absolute;
+    padding-left: 10px;
+    top: -1px;
+    right: -10px;
+    height: inherit;
+    z-index: -1;
+
+    li {
+        width: 120px;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        top: -10px;
+        left: 122px;
+        padding: 7px;
+        color: rgb(0, 0, 0);
+        background-image: radial-gradient(circle at 50% -20.71%, #ade5ff 0, #7dcefb 25%, #3cb5f2 50%, #009ce9 75%, #0085e0 100%);
+        transition: 0.5s;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 11;
+
+        a {
+            display: flex;
+            height: 30px;
+            text-align: center;
+        }
+    }
+}
+
+.primerFila li:hover>.segundoSubmenu li {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.segundoSubmenu .flechita:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid transparent;
+    border-top: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid rgb(221, 221, 210);
+    position: absolute;
+    top: 14px;
+    left: -20px;
+    border-radius: 2px;
+}
+
+/*Fin SubMenu del apartado Niveles*/
+/*Fin SubMenu*/

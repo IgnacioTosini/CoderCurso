@@ -5,162 +5,6 @@
   font-family: "Vollkorn";
 }
 
-/*.containerGridHeader {
-    position: relative;
-    height: 135px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "tituloPrincipal" "containerMenu";
-    .tituloPrincipal {
-        display: flex;
-        font-size: 12;
-        text-align: center;
-        justify-content: center;
-        background-image: radial-gradient(circle at 50% -20.71%,
-                #d7c35d 0,
-                #deba54 8.33%,
-                #e4b04d 16.67%,
-                #e9a546 25%,
-                #ed9841 33.33%,
-                #f0893e 41.67%,
-                #f2793c 50%,
-                #f3673d 58.33%,
-                #f35542 66.67%,
-                #f34249 75%,
-                #f22b52 83.33%,
-                #f0065d 91.67%,
-                #ec0069 100%);
-        color: rgb(0, 0, 0);
-        padding: 15px;
-        text-shadow: 7px 7px 10px black;
-        grid-area: tituloPrincipal;
-    }
-    /*Barra Menu*
-    .containerMenu {
-        position: absolute;
-        grid-area: containerMenu;
-        height: 100%;
-        width: 100%;
-        background: #2c3e50;
-        /* fallback for old browsers *
-        background: -webkit-linear-gradient(to right,
-                #3498db,
-                #2c3e50);
-        /* Chrome 10-25, Safari 5.1-6 *
-        background: linear-gradient(to right,
-                #3498db,
-                #2c3e50);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *
-        padding: 0, 10px;
-        .menu {
-            margin: auto;
-            height: 60px;
-                nav {
-                    height: 100%;
-                        .primerFila {
-                            display: flex;
-                            height: 100%;
-                            padding: 15px;
-                            flex-wrap: wrap;
-                            list-style: none;
-                            justify-content: center;
-                            li {
-                                height: 100%;
-                                width: 115px;
-                                position: relative;
-                                &:hover > ul {
-                                    visibility: visible;
-                                    opacity: 1;
-                                    transition: 0.3s;
-                                }
-                                ul{
-                                    &ul::before {
-                                        content: "";
-                                        width: 0;
-                                        height: 0;
-                                        border-bottom: 12px solid rgb(221, 221, 210);
-                                        border-left: 12px solid transparent;
-                                        border-right: 12px solid transparent;
-                                        position: absolute;
-                                        top: -12px;
-                                        left: 20px;
-                                        border-radius: 2px;
-                                    }
-                                }
-                                a {
-                                    width: 100%;
-                                    height: 100%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    text-decoration: none;
-                                    padding: 5px, 200px;
-                                    font-size: 16px;
-                                    background: rgb(221, 221, 210);
-                                    &:hover {
-                                        transform: scale(1.1);
-                                        background-color: rgb(219, 131, 15);
-                                        border-radius: 5px;
-                                        transition: 0.5s;
-                                    }
-                                    &:link {
-                                        background: rgba(0, 179, 219, 0.662745098);
-                                        /* fallback for old browsers *
-                                        background: -webkit-linear-gradient(to right,
-                                                rgba(0, 132, 176, 0.5137254902),
-                                                rgba(0, 179, 219, 0.5490196078));
-                                        /* Chrome 10-25, Safari 5.1-6 *
-                                        background: linear-gradient(to right,
-                                                rgba(0, 132, 176, 0.5882352941),
-                                                rgba(0, 179, 219, 0.5058823529));
-                                        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *
-                                    }   /*Fin Barra Menu*
-                                }/*SubMenu del apartado Niveles*
-                                .segundoSubmenu {
-                                    position: absolute;
-                                    padding-left: 10px;
-                                    top: -1px;
-                                    right: -10px;
-                                    height: inherit;
-                                    z-index: -1;
-                                        li {
-                                            width: 120px;
-                                            display: flex;
-                                            position: relative;
-                                            flex-direction: column;
-                                            top: -10px;
-                                            left: 122px;
-                                            padding: 7px;
-                                            color: rgb(0, 0, 0);
-                                            background-image: radial-gradient(circle at 50% -20.71%,
-                                                    #ade5ff 0,
-                                                    #7dcefb 25%,
-                                                    #3cb5f2 50%,
-                                                    #009ce9 75%,
-                                                    #0085e0 100%);
-                                            transition: 0.5s;
-                                            visibility: hidden;
-                                            opacity: 0;
-                                            z-index: 11;
-                                            a {
-                                                display: flex;
-                                                height: 30px;
-                                                text-align: center;
-                                            }
-                                        }
-                                }
-                            }
-                        }
-                }
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}*/
 .containerGridHeader {
   position: relative;
   height: 135px;
@@ -189,11 +33,8 @@
   height: 100%;
   width: 100%;
   background: #2c3e50;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #3498db, #2c3e50);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #3498db, #2c3e50);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 0, 10px;
 }
 
@@ -204,18 +45,14 @@ a {
 
 .primerFila li a:link {
   background: rgba(0, 179, 219, 0.662745098);
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, rgba(0, 132, 176, 0.5137254902), rgba(0, 179, 219, 0.5490196078));
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, rgba(0, 132, 176, 0.5882352941), rgba(0, 179, 219, 0.5058823529));
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .menu {
   margin: auto;
   height: 60px;
 }
-
 .menu nav {
   height: 100%;
 }
@@ -228,13 +65,11 @@ a {
   list-style: none;
   justify-content: center;
 }
-
 .primerFila li {
   height: 100%;
   width: 115px;
   position: relative;
 }
-
 .primerFila li a {
   width: 100%;
   height: 100%;
@@ -246,18 +81,14 @@ a {
   font-size: 16px;
   background: rgb(221, 221, 210);
 }
-
 .primerFila li a:hover {
   transform: scale(1.1);
   background-color: rgb(219, 131, 15);
   border-radius: 5px;
   transition: 0.5s;
 }
-
-/*Fin Barra Menu*/
-/*SubMenu*/
 .primerFila > li > ul {
-  width: 125px;
+  width: 128px;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -273,13 +104,11 @@ a {
   opacity: 0;
   z-index: 10;
 }
-
 .primerFila > li:hover > ul {
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
 }
-
 .primerFila > li > ul:before {
   content: "";
   width: 0;
@@ -292,18 +121,14 @@ a {
   left: 20px;
   border-radius: 2px;
 }
-
 .primerFila > li > ul > li {
   width: 114px;
   height: 35px;
   padding-bottom: 5px;
 }
-
-/*SubMenu del apartado Niveles*/
 .primerFila > li > ul > li > a {
   padding: 7px;
 }
-
 .primerFila > li > ul > li > a:hover {
   transition: 0.5s;
   background-color: rgb(219, 131, 15);
@@ -312,6 +137,9 @@ a {
   z-index: 9;
 }
 
+/*Fin Barra Menu*/
+/*SubMenu*/
+/*SubMenu del apartado Niveles*/
 .segundoSubmenu {
   position: absolute;
   padding-left: 10px;
@@ -320,7 +148,6 @@ a {
   height: inherit;
   z-index: -1;
 }
-
 .segundoSubmenu li {
   width: 120px;
   display: flex;
@@ -336,7 +163,6 @@ a {
   opacity: 0;
   z-index: 11;
 }
-
 .segundoSubmenu li a {
   display: flex;
   height: 30px;
@@ -369,7 +195,6 @@ a {
   display: grid;
   position: relative;
   width: 100%;
-  height: 614px;
   /*Aside*/
   /*Fin Aside*/
   /*Seccion Principal*/
@@ -403,30 +228,32 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 .contenedorSection .sectionInfo {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   background-image: linear-gradient(175deg, #6c90d8 0, #6c90d8 50%, #6c90d8 100%);
-  justify-content: center;
-  text-align: center;
   height: 100%;
   width: 100%;
 }
 .contenedorSection .sectionInfo .ciclos {
-  width: 100%;
+  position: relative;
+  width: 90%;
+  left: 3%;
   font-size: 1.6rem;
   margin: 0px 0px 30px 0px;
   background-color: rgba(199, 30, 30, 0.644);
 }
 .contenedorSection .sectionInfo h3 {
-  width: 80%;
+  position: relative;
+  width: 75%;
   background-color: goldenrod;
-  margin: 30px 0px 30px 0px;
+  left: 6%;
 }
 .contenedorSection .sectionInfo p {
-  /*font-family: "Times New Roman";*/
   line-height: 1.4;
 }
 
@@ -472,14 +299,12 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 .contenedorSection .sectionInfo {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
   background-image: linear-gradient(175deg, #6c90d8 0, #6c90d8 50%, #6c90d8 100%);
-  justify-content: center;
-  text-align: center;
   height: 100%;
   width: 100%;
 }
@@ -489,7 +314,7 @@ a {
   background-color: rgba(199, 30, 30, 0.644);
 }
 .contenedorSection .sectionInfo h3 {
-  width: 80%;
+  width: 85%;
   background-color: goldenrod;
   font-size: 1.3rem;
   margin: 30px 0px 30px 0px;
@@ -499,7 +324,7 @@ a {
   line-height: 1.5;
   font-size: 1.1em;
   color: #fff;
-  vertical-align: middle;
+  text-align: start;
   margin: 0px 70px 0px 70px;
 }
 
@@ -511,11 +336,8 @@ a {
   margin-right: auto;
   padding: 1.5em;
   background: #bdc3c7;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .infoContacto ul {
@@ -531,7 +353,6 @@ a {
 .contenedorContacto {
   box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
 }
-
 .contenedorContacto > * {
   padding: 1em;
 }
@@ -539,26 +360,21 @@ a {
 .contact-form {
   background: #222222;
 }
-
 .contact-form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 .contact-form form label {
   display: block;
 }
-
 .contact-form form p {
   margin: 0;
   padding: 1em;
   color: white;
 }
-
 .contact-form form .bloque {
   grid-column: 1/3;
 }
-
 .contact-form form button,
 .contact-form form input,
 .contact-form form textarea {
@@ -570,16 +386,13 @@ a {
   color: #fff;
   border-bottom: 1px solid #304ed6;
 }
-
 .contact-form form button {
   background: #110eb7;
   border: 0;
   text-transform: uppercase;
   padding: 1em;
 }
-
-.contact-form form button:hover,
-.contact-form form button:focus {
+.contact-form form button:hover, .contact-form form button:focus {
   background: #d63031;
   color: #fff;
   transition: background-color 1s ease-out;
@@ -590,7 +403,6 @@ a {
 .infoContacto {
   background: rgba(0, 0, 0, 0.534);
 }
-
 .infoContacto h4,
 .infoContacto ul,
 .infoContacto p {
@@ -599,78 +411,14 @@ a {
   color: white;
 }
 
-/*input:focus
-.container p:not(.class) para excluir a la clase
-form::placeholder*/
-/*Fin Pagina Contactanos*/
-/*Parte Footer
-.containerGridFooter {
-    display: grid;
-    grid-template-columns: 1fr;
-    background: #0f0c29;
-    /* fallback for old browsers
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* Chrome 10-25, Safari 5.1-6
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
-    grid-template-areas: "redesSociales";
-
-    .redesSociales {
-        grid-area: redesSociales;
-        display: flex;
-        text-align: justify;
-
-        a {
-            padding: 4px;
-
-            .logos {
-                display: flex;
-                height: 40px;
-                border-radius: 20px;
-                text-decoration: none;
-            }
-        }
-    }
-
-    .contenedorFlechaArriba {
-        position: fixed;
-        width: 7%;
-        right: 0%;
-        bottom: 1%;
-
-        .flechaParaArriba {
-            height: 50px;
-            width: 50px;
-            border-radius: 30px;
-            right: 1%;
-            bottom: 1%;
-        }
-
-        p {
-            position: absolute;
-            width: 50px;
-            display: flex;
-            flex-direction: row;
-            height: 25px;
-            bottom: 110%;
-            right: 50%;
-            padding: 5px;
-            text-align: center;
-            visibility: hidden;
-        }
-    }
-}*/
 /*Parte Footer*/
 .containerGridFooter {
   display: grid;
   grid-template-columns: 1fr;
-  background: #0f0c29;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   grid-template-areas: "redesSociales";
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
 .logos {
@@ -685,7 +433,6 @@ form::placeholder*/
   display: flex;
   text-align: justify;
 }
-
 .redesSociales a {
   padding: 4px;
 }
@@ -696,6 +443,21 @@ form::placeholder*/
   right: 0%;
   bottom: 1%;
 }
+.contenedorFlechaArriba p {
+  position: absolute;
+  width: 50px;
+  height: 28px;
+  bottom: 110%;
+  right: 50%;
+  padding: 5px;
+  visibility: hidden;
+}
+.contenedorFlechaArriba:hover p {
+  visibility: visible;
+  transition: 0.3s;
+  background-color: rgba(255, 235, 205, 0.76);
+  border-radius: 5px;
+}
 
 .flechaParaArriba {
   height: 50px;
@@ -705,27 +467,10 @@ form::placeholder*/
   bottom: 1%;
 }
 
-.contenedorFlechaArriba p {
-  position: absolute;
-  width: 50px;
-  display: flex;
-  flex-direction: row;
-  height: 25px;
-  bottom: 110%;
-  right: 50%;
-  padding: 5px;
-  text-align: center;
-  visibility: hidden;
-}
-
-.contenedorFlechaArriba:hover p {
-  visibility: visible;
-  transition: 0.3s;
-  background-color: rgba(255, 235, 205, 0.76);
-  border-radius: 5px;
-}
-
 /*Fin Parte Footer*/
+/*input:focus
+.container p:not(.class) para excluir a la clase
+form::placeholder*/
 @media screen and (max-width: 768px) {
   /*Parte Footer*/
   .contenedorFlechaArriba {

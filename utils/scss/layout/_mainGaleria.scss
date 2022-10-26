@@ -1,0 +1,44 @@
+/*Pagina Galeria*/
+.contenedor {
+    padding: 10px 0;
+    background-image: linear-gradient(to right bottom,
+            #051937,
+            #003c5e,
+            #006168,
+            #008352,
+            #7b9d2d);
+
+    .card {
+        border-radius: 10px;
+        min-height: 150px;
+        font-weight: bold;
+        margin-left: 1rem;
+        padding: 10px;
+        height: 200px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        background-color: rgba(127, 255, 212, 0.493);
+
+        &:hover {
+            visibility: visible;
+            background-color: rgb(30, 30, 196);
+            transition: 0.5s;
+        }
+    }
+
+    .text {
+        position: absolute;
+        max-width: 400px;
+        top: 25%;
+        left: 27%;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.521);
+        border-radius: 5px;
+        visibility: hidden;
+        z-index: 5;
+        background-color: rgba(127, 255, 212, 0.411);
+    }
+}
+
+/*Fin Pagina Galeria*/

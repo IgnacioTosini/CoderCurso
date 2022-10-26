@@ -1,0 +1,40 @@
+.containerGridMain {
+    display: grid;
+    position: relative;
+    width: 100%;
+
+    /*Aside*/
+    .aside_Container {
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+        h3 {
+            font-size: x-large;
+            text-align: center;
+            background: #1f4037;
+            background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
+            background: linear-gradient(to right, #99f2c8, #1f4037);
+
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+            margin: 0 20px 0 20px;
+        }
+    }
+
+    /*Fin Aside*/
+    /*Seccion Principal*/
+    .sectionPrincipal {
+        display: flex;
+        flex-wrap: wrap;
+        background-image: linear-gradient(180deg,
+                #9fb7f5 0,
+                #6c90d8 50%,
+                #2c6bbb 100%);
+        padding: 20px;
+        justify-content: center;
+    }
+
+    /*Fin Seccion Principal*/
+}
