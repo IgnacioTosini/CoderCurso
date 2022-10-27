@@ -16,9 +16,10 @@
 
 .tituloPrincipal {
   display: flex;
-  font-size: 30px;
-  text-align: center;
+  flex-direction: none;
   justify-content: center;
+  align-items: center;
+  font-size: 30px;
   background-image: radial-gradient(circle at 50% -20.71%, #d7c35d 0, #deba54 8.33%, #e4b04d 16.67%, #e9a546 25%, #ed9841 33.33%, #f0893e 41.67%, #f2793c 50%, #f3673d 58.33%, #f35542 66.67%, #f34249 75%, #f22b52 83.33%, #f0065d 91.67%, #ec0069 100%);
   color: rgb(0, 0, 0);
   padding: 15px;
@@ -59,11 +60,13 @@ a {
 
 .primerFila {
   display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   padding: 15px;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: center;
 }
 .primerFila li {
   height: 100%;
@@ -91,6 +94,8 @@ a {
   width: 128px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 45px;
   left: 10px;
@@ -151,8 +156,10 @@ a {
 .segundoSubmenu li {
   width: 120px;
   display: flex;
-  position: relative;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   top: -10px;
   left: 122px;
   padding: 7px;
@@ -165,8 +172,10 @@ a {
 }
 .segundoSubmenu li a {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 30px;
-  text-align: center;
 }
 
 .primerFila li:hover > .segundoSubmenu li {
@@ -222,6 +231,34 @@ a {
   padding: 20px;
   justify-content: center;
 }
+.containerGridMain .sectionPrincipal h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 90%;
+  background-color: rgba(199, 30, 30, 0.644);
+}
+.containerGridMain .sectionPrincipal .contenedorTextoPrincipal {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border: 6px solid rgb(131, 64, 64);
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(28, 181, 224, 0.4784313725);
+  background: linear-gradient(to right, rgba(28, 181, 224, 0.3764705882), rgba(84, 115, 129, 0.4039215686));
+  margin-bottom: 2rem;
+}
+.containerGridMain .sectionPrincipal .contenedorTextoPrincipal p {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin: 1rem;
+}
+.containerGridMain .sectionPrincipal img {
+  border: 5px solid rgba(0, 0, 0, 0.3764705882);
+  border-radius: 10px;
+  width: 100%;
+}
 
 /*Pagina Niveles*/
 .contenedorSection {
@@ -229,6 +266,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .contenedorSection .sectionInfo {
@@ -300,7 +338,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 .contenedorSection .sectionInfo {
   position: relative;
@@ -322,8 +360,7 @@ a {
 .contenedorSection .sectionInfo p {
   font-family: "Times New Roman";
   line-height: 1.5;
-  font-size: 1.1em;
-  color: #fff;
+  font-size: 1rem;
   text-align: start;
   margin: 0px 70px 0px 70px;
 }
@@ -362,7 +399,8 @@ a {
 }
 .contact-form form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 .contact-form form label {
   display: block;
@@ -414,7 +452,8 @@ a {
 /*Parte Footer*/
 .containerGridFooter {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "redesSociales";
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -431,7 +470,9 @@ a {
 .redesSociales {
   grid-area: redesSociales;
   display: flex;
-  text-align: justify;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
 }
 .redesSociales a {
   padding: 4px;

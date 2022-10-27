@@ -22,7 +22,6 @@
             margin: 0 20px 0 20px;
         }
     }
-
     /*Fin Aside*/
     /*Seccion Principal*/
     .sectionPrincipal {
@@ -34,7 +33,34 @@
                 #2c6bbb 100%);
         padding: 20px;
         justify-content: center;
+        h2{
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 90%;
+            background-color: $colorFondoTitulos;
+        }
+        .contenedorTextoPrincipal{
+            position: relative;
+            width: 100%;
+            height: auto;
+            border: 6px solid rgb(131, 64, 64);
+            border-radius: 10px;
+            padding: 20px;
+            background: #1cb5e07a;
+            background: linear-gradient(to right, #1cb5e060, #54738167);
+            margin-bottom: 2rem;
+            p{
+                font-size: $tamanioParrafos;
+                margin-left: 1rem;
+                margin: 1rem;
+            }
+        }
+        img{
+            border: 5px solid #00000060;
+            border-radius: 10px;
+            width: 100%;
+        }
     }
-
-    /*Fin Seccion Principal*/
+/*Fin Seccion Principal*/
 }

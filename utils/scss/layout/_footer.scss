@@ -1,7 +1,6 @@
 /*Parte Footer*/
 .containerGridFooter {
-    display: grid;
-    grid-template-columns: 1fr;
+    @include properties-grid(1,1);
     grid-template-areas: "redesSociales";
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -17,8 +16,7 @@
 
 .redesSociales {
     grid-area: redesSociales;
-    display: flex;
-    text-align: justify;
+    @include properties-flex(row, none, center);
     a {
         padding: 4px;
     }

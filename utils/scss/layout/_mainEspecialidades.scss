@@ -1,10 +1,7 @@
 /*Pagina Especialidades*/
 .contenedorSection {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    @include properties-flex(column, center, center);
 
     .sectionInfo {
         position: relative;
@@ -31,8 +28,7 @@
         p {
             font-family: "Times New Roman";
             line-height: 1.5;
-            font-size: 1.1em;
-            color: #fff;
+            font-size: $tamanioParrafos;
             text-align: start;
             margin: 0px 70px 0px 70px;
         }

@@ -1,9 +1,7 @@
 /*Pagina Niveles*/
 .contenedorSection {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include properties-flex(column, center, center);
     text-align: center;
 
     .sectionInfo {
@@ -23,7 +21,7 @@
             left: 3%;
             font-size: 1.6rem;
             margin: 0px 0px 30px 0px;
-            background-color: rgba(199, 30, 30, 0.644);
+            background-color: $colorFondoTitulos;
         }
 
         h3 {
