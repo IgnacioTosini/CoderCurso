@@ -7,6 +7,15 @@
     grid-template-areas: "tituloPrincipal" "containerMenu";
 }
 
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
 .tituloPrincipal {
     @include properties-flex(none, center, center);
     font-size: 30px;
