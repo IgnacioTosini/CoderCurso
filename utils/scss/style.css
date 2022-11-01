@@ -17,7 +17,16 @@
 .logo {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.logo2 {
+  position: absolute;
+  top: 0;
+  right: 50px;
   width: 70px;
   height: 70px;
   z-index: 1;
@@ -288,10 +297,10 @@ a {
 }
 .contenedorSection .sectionInfo .ciclos {
   position: relative;
-  width: 90%;
+  width: 93%;
   left: 3%;
   font-size: 1.6rem;
-  margin: 0px 0px 30px 0px;
+  margin: 30px 0px 10px 0px;
   background-color: rgba(199, 30, 30, 0.644);
 }
 .contenedorSection .sectionInfo h3 {
@@ -306,37 +315,153 @@ a {
 
 /*Fin Pagina Niveles*/
 /*Pagina Galeria*/
-.contenedor {
-  padding: 10px 0;
-  background-image: linear-gradient(to right bottom, #051937, #003c5e, #006168, #008352, #7b9d2d);
+/*.contenedor {
+    padding: 10px 0;
+    background-image: linear-gradient(to right bottom,
+            #051937,
+            #003c5e,
+            #006168,
+            #008352,
+            #7b9d2d);
+        .card {
+        border-radius: 10px;
+        min-height: 150px;
+        margin-left: 1rem;
+        padding: 10px;
+        height: 200px;
+        background-color: rgba(127, 255, 212, 0.493);
+        z-index: 1;
+
+        &:hover{
+            background-color: rgb(30, 30, 196);
+            transition: 0.5s;
+        }
+    }
 }
-.contenedor p {
+
+.containerInfoFoto{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    left: 24%;
+    @include properties-grid(1fr 1fr, repeat(4, 1fr));
+    grid-gap: 215px 0px;
+    grid-template-areas:
+    "text-1 text-2"
+    "text-3 text-4"
+    "text-5 text-6"
+    "text-7 text-8";
+    p {
+        position: absolute;
+        width: 280px;
+        height: 190px;
+        background-color: #9db900cb;
+        border-radius: 20px;
+        padding: 10px;
+        visibility: visible;
+        border: 4px solid #d9ff00cb;
+    }
+    .card:hover p{
+        visibility: visible;
+    }
+
+    .text-1{
+        grid-area: text-1;
+    }
+    .text-2{
+        grid-area: text-2;
+    }
+    .text-3{
+        grid-area: text-3;
+    }
+    .text-4{
+        grid-area: text-4;
+    }
+    .text-5{
+        grid-area: text-5;
+    }
+    .text-6{
+        grid-area: text-6;
+    }
+    .text-7{
+        grid-area: text-7;
+    }
+    .text-8{
+        grid-area: text-8;
+    }
+}*/
+main {
+  background-color: rgba(0, 60, 94, 0.7058823529);
+}
+main .slideContenedor {
+  position: relative;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 50%;
+  height: 620px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 122, 0.267);
+}
+main .slideContenedor .miSlider img {
+  left: 10%;
+  width: 100%;
+  max-height: 60vh;
+  vertical-align: top;
+  transition: 2s;
+  border: 3px solid rgba(51, 53, 153, 0.664);
+  border-radius: 3px;
+}
+main .slideContenedor .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+main .slideContenedor .direcciones {
+  width: 99%;
+  height: 10%;
   position: absolute;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 300px;
-  height: auto;
-  left: 25%;
-  top: 20%;
-  background-color: #5e002c;
-  border-radius: 2px;
-  padding: 10px;
+  top: 20;
+  display: flex;
+  flex-direction: none;
+  justify-content: space-between;
+  align-items: center;
 }
-.contenedor .card {
-  border-radius: 10px;
-  min-height: 150px;
-  margin-left: 1rem;
-  padding: 10px;
-  height: 200px;
-  background-color: rgba(127, 255, 212, 0.493);
-  /*&:hover > p{
-      visibility: visible;
-      background-color: rgb(30, 30, 196);
-  }*/
+main .slideContenedor .direcciones a {
+  color: #fff;
+  padding: 20px;
+  text-decoration: none;
+  background-color: rgba(0, 60, 94, 0.4039215686);
+  border-radius: 100px;
 }
-.contenedor .card:hover {
-  background-color: rgb(30, 30, 196);
+main .slideContenedor .direcciones a:hover {
+  background: rgba(0, 0, 0, 0.5);
   transition: 0.5s;
+}
+main .slideContenedor .barras {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: none;
+  margin-bottom: 15px;
+}
+main .slideContenedor .barras .barra {
+  cursor: pointer;
+  height: 8px;
+  width: 30px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background: #dcdde1;
+  display: inline-block;
+  margin-left: 3px;
+}
+main .slideContenedor .barras .active {
+  background-color: #e74c3c;
 }
 
 /*Fin Pagina Galeria*/
@@ -363,14 +488,14 @@ a {
   width: 85%;
   background-color: goldenrod;
   font-size: 1.3rem;
-  margin: 30px 0px 30px 0px;
+  margin: 20px 0px 30px 0px;
 }
 .contenedorSection .sectionInfo p {
   font-family: "Times New Roman";
   line-height: 1.5;
   font-size: 1rem;
   text-align: start;
-  margin: 0px 70px 0px 70px;
+  margin: 0px 70px 30px 70px;
 }
 
 /*Fin Pagina Especialidades*/
@@ -554,6 +679,16 @@ form::placeholder*/
     background-color: rgba(255, 235, 205, 0.76);
     border-radius: 5px;
   }
+  main .slideContenedor {
+    position: relative;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 720px) {
+  main .slideContenedor {
+    position: relative;
+    width: 85%;
+  }
 }
 @media screen and (max-width: 640px) {
   .containerGridMain {
@@ -561,6 +696,19 @@ form::placeholder*/
     position: relative;
     width: 100%;
     height: 1000px;
+  }
+  main .slideContenedor {
+    position: relative;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 617px) {
+  .tituloPrincipal {
+    font-size: 20px;
+  }
+  .logo, .logo2 {
+    height: 50px;
+    width: 50px;
   }
 }
 @media screen and (max-width: 604px) {
@@ -613,6 +761,17 @@ form::placeholder*/
   }
 }
 @media screen and (max-width: 480px) {
+  .logo, .logo2 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+  }
+  .logo {
+    left: 20px;
+  }
+  .logo2 {
+    right: 20px;
+  }
   /*Parte Footer*/
   .contenedorFlechaArriba {
     position: fixed;
@@ -648,7 +807,17 @@ form::placeholder*/
 }
 @media screen and (max-width: 410px) {
   .tituloPrincipal {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .logo {
+    left: 10px;
+  }
+  .logo2 {
+    right: 10px;
+  }
+  main .slideContenedor {
+    position: relative;
+    width: 95%;
   }
   .segundoSubmenu {
     top: 88px;
@@ -717,11 +886,27 @@ form::placeholder*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
+  main .slideContenedor {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 9%;
     right: 10%;
     bottom: 3%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .tituloPrincipal {
+    font-size: 16px;
+  }
+  .logo {
+    left: 10px;
+  }
+  .logo2 {
+    right: 10px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -734,7 +919,7 @@ form::placeholder*/
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu" "containerMenu" "containerMenu";
   }
   .tituloPrincipal {
-    font-size: 20px;
+    font-size: 15px;
   }
   /*Parte Footer*/
   .containerGridFooter {

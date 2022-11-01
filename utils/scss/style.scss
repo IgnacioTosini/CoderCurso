@@ -50,6 +50,18 @@ form::placeholder*/
         background-color: rgba(255, 235, 205, 0.76);
         border-radius: 5px;
     }
+
+    main .slideContenedor {
+        position: relative;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main .slideContenedor {
+        position: relative;
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -59,8 +71,23 @@ form::placeholder*/
         width: 100%;
         height: 1000px;
     }
+
+    main .slideContenedor {
+        position: relative;
+        width: 85%;
+    }
 }
 
+@media screen and (max-width: 617px) {
+    .tituloPrincipal{
+        font-size: 20px;
+    }
+
+    .logo, .logo2{
+        height: 50px;
+        width: 50px;
+    }
+}
 
 @media screen and (max-width: 604px) {
     .containerGridHeader {
@@ -118,11 +145,23 @@ form::placeholder*/
             background-color: rgba(255, 235, 205, 0.76);
             border-radius: 5px;
         }
-
     }
 }
 
 @media screen and (max-width: 480px) {
+    .logo, .logo2{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo{
+        left: 20px;
+    }
+
+    .logo2{
+        right: 20px;
+    }
 
     /*Parte Footer*/
     .contenedorFlechaArriba {
@@ -164,7 +203,20 @@ form::placeholder*/
 
 @media screen and (max-width: 410px) {
     .tituloPrincipal {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .logo{
+        left: 10px;
+    }
+
+    .logo2{
+        right: 10px;
+    }
+
+    main .slideContenedor {
+        position: relative;
+        width: 95%;
     }
 
     .segundoSubmenu {
@@ -248,6 +300,12 @@ form::placeholder*/
         ;
     }
 
+    main .slideContenedor {
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+
     .contenedorFlechaArriba {
         position: fixed;
         width: 9%;
@@ -256,6 +314,21 @@ form::placeholder*/
     }
 
 }
+@media screen and (max-width: 350px) {
+    .tituloPrincipal {
+        font-size: 16px;
+    }
+
+    .logo{
+        left: 10px;
+    }
+
+    .logo2{
+        right: 10px;
+    }
+}
+
+
 
 @media screen and (max-width: 320px) {
     .containerGridHeader {
@@ -274,7 +347,7 @@ form::placeholder*/
     }
 
     .tituloPrincipal {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     /*Parte Footer*/

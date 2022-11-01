@@ -15,15 +15,16 @@
     <link rel="stylesheet" type="text/css" href="../utils/scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" href="../img/ESEAN1Bco.png" type="image/x-icon">
-    <title>Polivalente de Arte</title>
+    <title>ESEA N° 1 - Polivalente de Arte</title>
     <picture>
         <img class="logo" src="../img/ESEAN1Bco.png">
+        <img class="logo2" src="../img/ESEAN1Bco.png">
     </picture>
 </head>
 
 <body>
     <header class="grid grid-row-2 containerGridHeader">
-        <h1 class="tituloPrincipal animate__animated animate__heartBeat" id="tituloPrincipal">Polivalente de Arte</h1>
+        <h1 class="tituloPrincipal animate__animated animate__heartBeat" id="tituloPrincipal">ESEA N° 1 - Polivalente de Arte</h1>
         <div class="containerMenu">
             <div class="menu">
                 <nav>
@@ -49,9 +50,9 @@
                         <li><a href="./galeriaDeFotos.html">Galeria</a></li>
                         <li><a href="especialidades.html">Especialidades</a>
                             <ul>
-                                <li><a href="./especialidades.html#artesVisuales">Artes Visuales</a>
-                                <li><a href="./especialidades.html#musica">Musica</a>
-                                <li><a href="./especialidades.html#danza">Danza</a>
+                                <li><a href="./especialidades.html#artesVisuales">Artes Visuales</a></li>
+                                <li><a href="./especialidades.html#musica">Musica</a></li>
+                                <li><a href="./especialidades.html#danza">Danza</a></li>
                             </ul>
                         </li>
                         <li><a href="./contactos.html">Contactanos</a></li>
@@ -62,16 +63,67 @@
     </header>
 
     <main>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 contenedor">
-            <img class="card"src="../img/galeria1.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria2.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria3.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria4.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria5.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria6.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria7.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
-            <img class="card"src="../img/galeria8.jpeg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+        <div class="slideContenedor">
+            <div class="miSlider fade">
+                <img src="../img/galeria1.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria2.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria3.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria4.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria5.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria6.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria7.jpeg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="../img/galeria8.jpeg" alt="">
+            </div>
+            <div class="direcciones">
+                <a href="#" class="atras" onclick= "avanzaSlide(-1)">&#10094;</a>
+                <a href="#" class="adelante" onclick= "avanzaSlide(1)">&#10095;</a>
+            </div>
+            <div class="barras">
+                <span class="barra active" onclick="posicionSlide(1)"></span>
+                <span class="barra" onclick="posicionSlide(2)"></span>
+                <span class="barra" onclick="posicionSlide(3)"></span>
+                <span class="barra" onclick="posicionSlide(4)"></span>
+                <span class="barra" onclick="posicionSlide(5)"></span>
+                <span class="barra" onclick="posicionSlide(6)"></span>
+                <span class="barra" onclick="posicionSlide(7)"></span>
+                <span class="barra" onclick="posicionSlide(8)"></span>
+            </div>
         </div>
+        <script src="../main.js"></script>
+
+        <!--<div class="grid grid-cols-1 md:grid-cols-2 gap-4 contenedor">
+            <img class="card"src="../img/galeria2.jpeg">
+            <img class="card"src="../img/galeria1.jpeg">
+            <img class="card"src="../img/galeria3.jpeg">
+            <img class="card"src="../img/galeria4.jpeg">
+            <img class="card"src="../img/galeria5.jpeg">
+            <img class="card"src="../img/galeria6.jpeg">
+            <img class="card"src="../img/galeria7.jpeg">
+            <img class="card"src="../img/galeria8.jpeg">
+        </div>
+        <div class="containerInfoFoto"><p class="text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+            <p class="text-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptas odio, vel nulla ducimus modi. Consequatur unde non laboriosam illum aperiam reprehenderit aliquid rem maiores voluptatem, quo, impedit harum!</p>
+        </div>-->
     </main>
 
     <footer>
