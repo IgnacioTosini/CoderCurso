@@ -1,24 +1,37 @@
 /*Parte Footer*/
 .containerGridFooter {
     @include properties-grid(1,1);
-    grid-template-areas: "redesSociales";
+    grid-template-areas: "redesSociales infoFooter";
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-}
-
-.logos {
-    display: flex;
-    height: 40px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.redesSociales {
-    grid-area: redesSociales;
-    @include properties-flex(row, none, center);
-    a {
-        padding: 4px;
+    .redesSociales {
+        grid-area: redesSociales;
+        @include properties-flex(row, none, center);
+        a {
+            padding: 4px;
+        }
+        .logos {
+            display: flex;
+            height: 40px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+    }
+    .infoFooter{
+        grid-area: infoFooter;
+        position: absolute;
+        left: 50%;
+        right: 0;
+        font-size: 12px;
+        width: 120px;
+        height: 6%;
+        text-align: center;
+        background-color: #2801834d;
+        p{
+            font-size: 12px;
+            color: #fff;
+        }
     }
 }
 

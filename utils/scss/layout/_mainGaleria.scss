@@ -95,6 +95,19 @@ main{
                 border: 3px solid rgba(51, 53, 153, 0.664);
                 border-radius: 3px;
             }
+            p{
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                padding: 5px;
+                width: auto;
+                height: 40px;
+                text-align: center;
+                border: 4px solid rgba(255, 0, 0, 0.445);
+                border-radius: 5px;
+                background-color: #003c5e67;
+                color: #dbdbdb;
+            }
         }
         .fade {
             animation-name: fade;

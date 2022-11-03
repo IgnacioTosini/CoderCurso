@@ -8,9 +8,6 @@ function avanzaSlide(n) {
 function posicionSlide(n) {
     muestraSlides(indice = n);
 }
-setInterval(function tiempo() {
-    muestraSlides(indice += 1)
-}, 11000);
 
 function muestraSlides(n) {
     let i;
