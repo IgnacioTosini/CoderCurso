@@ -615,7 +615,7 @@ main .slideContenedor .barras .active {
   justify-content: none;
   align-items: center;
 }
-.containerGridFooter .redesSociales a {
+.containerGridFooter .redesSociales li {
   padding: 4px;
 }
 .containerGridFooter .redesSociales .logos {

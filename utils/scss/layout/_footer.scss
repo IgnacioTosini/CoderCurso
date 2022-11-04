@@ -8,7 +8,7 @@
     .redesSociales {
         grid-area: redesSociales;
         @include properties-flex(row, none, center);
-        a {
+        li {
             padding: 4px;
         }
         .logos {
