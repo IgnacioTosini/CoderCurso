@@ -1,5 +1,4 @@
 @media screen and (max-width: 480px) {
-
     .logo,
     .logo2 {
         position: absolute;
@@ -13,6 +12,31 @@
 
     .logo2 {
         right: 20px;
+    }
+
+    .flechita2:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid rgb(221, 221, 210);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        position: absolute;
+        top: 23px;
+        left: 50%;
+        border-radius: 2px;
+    }
+
+    .containerGridMain{
+        .aside_Container {
+            .containerMap {
+                position: absolute;
+                top: 38%;
+                left: 18%;
+            }
+        }
     }
 
     /*Parte Footer*/
@@ -99,6 +123,22 @@
 
     .flechita {
         visibility: hidden;
+    }
+
+    .containerGridMain{
+        .aside_Container {
+            .containerMap {
+                position: absolute;
+                top: 37%;
+                left: 25%;
+                width: 50%;
+                p{
+                    position: relative;
+                    font-size: 15px;
+                    top: 12px;
+                }
+            }
+        }
     }
 
     /*Parte Footer*/

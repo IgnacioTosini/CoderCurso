@@ -5,15 +5,25 @@
 
     /*Aside*/
     .aside_Container {
+        position: relative;
         background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
+        .containerNoticias{
+            position: relative;
+            height: 95%;
+            iframe{
+                position: relative;
+                left: 5%;
+                padding-top: 10px;
+                width: 90%;
+            }
+        }
         h3 {
             font-size: x-large;
             text-align: center;
             background: #1f4037;
             background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);
             background: linear-gradient(to right, #99f2c8, #1f4037);
-
         }
 
         p {
@@ -60,6 +70,19 @@
             border: 5px solid #00000060;
             border-radius: 10px;
             width: 100%;
+        }
+        .containerMap{
+            position: relative;
+            margin: 20px;
+            text-align: center;
+            .locationPoli{
+                margin: 5px 10px;
+                border: 5px solid #00000060;
+                border-radius: 10px;
+            }
+            p{
+                background-color: #0000002c;
+            }
         }
     }
 /*Fin Seccion Principal*/

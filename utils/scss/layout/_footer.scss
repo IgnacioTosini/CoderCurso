@@ -2,6 +2,7 @@
 .containerGridFooter {
     @include properties-grid(1,1);
     grid-template-areas: "redesSociales infoFooter";
+    height: auto;
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -26,7 +27,7 @@
         right: 0;
         font-size: 12px;
         width: 120px;
-        height: 6%;
+        height: 5%;
         text-align: center;
         background-color: #2801834d;
         p{

@@ -228,7 +228,18 @@ a {
   /*Fin Seccion Principal*/
 }
 .containerGridMain .aside_Container {
+  position: relative;
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.containerGridMain .aside_Container .containerNoticias {
+  position: relative;
+  height: 95%;
+}
+.containerGridMain .aside_Container .containerNoticias iframe {
+  position: relative;
+  left: 5%;
+  padding-top: 10px;
+  width: 90%;
 }
 .containerGridMain .aside_Container h3 {
   font-size: x-large;
@@ -277,6 +288,19 @@ a {
   border-radius: 10px;
   width: 100%;
 }
+.containerGridMain .sectionPrincipal .containerMap {
+  position: relative;
+  margin: 20px;
+  text-align: center;
+}
+.containerGridMain .sectionPrincipal .containerMap .locationPoli {
+  margin: 5px 10px;
+  border: 5px solid rgba(0, 0, 0, 0.3764705882);
+  border-radius: 10px;
+}
+.containerGridMain .sectionPrincipal .containerMap p {
+  background-color: rgba(0, 0, 0, 0.1725490196);
+}
 
 /*Pagina Niveles*/
 .contenedorSection {
@@ -316,81 +340,6 @@ a {
 
 /*Fin Pagina Niveles*/
 /*Pagina Galeria*/
-/*.contenedor {
-    padding: 10px 0;
-    background-image: linear-gradient(to right bottom,
-            #051937,
-            #003c5e,
-            #006168,
-            #008352,
-            #7b9d2d);
-        .card {
-        border-radius: 10px;
-        min-height: 150px;
-        margin-left: 1rem;
-        padding: 10px;
-        height: 200px;
-        background-color: rgba(127, 255, 212, 0.493);
-        z-index: 1;
-
-        &:hover{
-            background-color: rgb(30, 30, 196);
-            transition: 0.5s;
-        }
-    }
-}
-
-.containerInfoFoto{
-    position: absolute;
-    top: 20%;
-    width: 100%;
-    left: 24%;
-    @include properties-grid(1fr 1fr, repeat(4, 1fr));
-    grid-gap: 215px 0px;
-    grid-template-areas:
-    "text-1 text-2"
-    "text-3 text-4"
-    "text-5 text-6"
-    "text-7 text-8";
-    p {
-        position: absolute;
-        width: 280px;
-        height: 190px;
-        background-color: #9db900cb;
-        border-radius: 20px;
-        padding: 10px;
-        visibility: visible;
-        border: 4px solid #d9ff00cb;
-    }
-    .card:hover p{
-        visibility: visible;
-    }
-
-    .text-1{
-        grid-area: text-1;
-    }
-    .text-2{
-        grid-area: text-2;
-    }
-    .text-3{
-        grid-area: text-3;
-    }
-    .text-4{
-        grid-area: text-4;
-    }
-    .text-5{
-        grid-area: text-5;
-    }
-    .text-6{
-        grid-area: text-6;
-    }
-    .text-7{
-        grid-area: text-7;
-    }
-    .text-8{
-        grid-area: text-8;
-    }
-}*/
 main {
   background-color: rgba(0, 60, 94, 0.7058823529);
 }
@@ -408,8 +357,6 @@ main .slideContenedor {
   background-color: rgba(0, 0, 122, 0.267);
 }
 main .slideContenedor .miSlider img {
-  left: 10%;
-  width: 100%;
   max-height: 60vh;
   vertical-align: top;
   transition: 2s;
@@ -418,16 +365,21 @@ main .slideContenedor .miSlider img {
 }
 main .slideContenedor .miSlider p {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 4%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 5px;
-  width: auto;
-  height: 40px;
-  text-align: center;
-  border: 4px solid rgba(255, 0, 0, 0.445);
+  width: 100%;
+  height: auto;
   border-radius: 5px;
   background-color: rgba(0, 60, 94, 0.4039215686);
   color: #dbdbdb;
+}
+main .slideContenedor .miSlider .acomodoFoto {
+  top: 2%;
 }
 main .slideContenedor .fade {
   animation-name: fade;
@@ -604,6 +556,7 @@ main .slideContenedor .barras .active {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "redesSociales infoFooter";
+  height: auto;
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -632,7 +585,7 @@ main .slideContenedor .barras .active {
   right: 0;
   font-size: 12px;
   width: 120px;
-  height: 6%;
+  height: 5%;
   text-align: center;
   background-color: rgba(40, 1, 131, 0.3019607843);
 }
@@ -673,6 +626,20 @@ main .slideContenedor .barras .active {
 
 /*Fin Parte Footer*/
 @media screen and (max-width: 768px) {
+  .flechita2:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid rgb(221, 221, 210);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    border-radius: 2px;
+  }
   /*Parte Footer*/
   .contenedorFlechaArriba {
     position: fixed;
@@ -722,11 +689,14 @@ main .slideContenedor .barras .active {
     display: grid;
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: auto;
   }
   main .slideContenedor {
     position: relative;
     width: 85%;
+  }
+  .aside_Container {
+    height: 1100px;
   }
 }
 @media screen and (max-width: 617px) {
@@ -801,6 +771,25 @@ main .slideContenedor .barras .active {
   .logo2 {
     right: 20px;
   }
+  .flechita2:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid rgb(221, 221, 210);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    border-radius: 2px;
+  }
+  .containerGridMain .aside_Container .containerMap {
+    position: absolute;
+    top: 38%;
+    left: 18%;
+  }
   /*Parte Footer*/
   .contenedorFlechaArriba {
     position: fixed;
@@ -872,6 +861,17 @@ main .slideContenedor .barras .active {
   }
   .flechita {
     visibility: hidden;
+  }
+  .containerGridMain .aside_Container .containerMap {
+    position: absolute;
+    top: 37%;
+    left: 25%;
+    width: 50%;
+  }
+  .containerGridMain .aside_Container .containerMap p {
+    position: relative;
+    font-size: 15px;
+    top: 12px;
   }
   /*Parte Footer*/
   .contenedorFlechaArriba {
