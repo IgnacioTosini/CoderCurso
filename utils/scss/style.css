@@ -268,22 +268,6 @@ a {
   width: 70%;
   background-color: rgba(199, 30, 30, 0.644);
 }
-.containerGridMain .sectionPrincipal .contenedorTextoPrincipal {
-  position: relative;
-  width: 70%;
-  height: auto;
-  border: 6px solid rgb(131, 64, 64);
-  border-radius: 10px;
-  padding: 20px;
-  background: rgba(28, 181, 224, 0.4784313725);
-  background: linear-gradient(to right, rgba(28, 181, 224, 0.3764705882), rgba(84, 115, 129, 0.4039215686));
-  margin-bottom: 2rem;
-}
-.containerGridMain .sectionPrincipal .contenedorTextoPrincipal p {
-  font-size: 1rem;
-  margin-left: 1rem;
-  margin: 1rem;
-}
 .containerGridMain .sectionPrincipal img {
   position: relative;
   border: 5px solid rgba(0, 0, 0, 0.3764705882);
@@ -313,24 +297,19 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: linear-gradient(180deg, #9fb7f5 0, #6c90d8 50%, #2c6bbb 100%);
 }
-.contenedorSection .sectionInfo {
+.contenedorSection h2 {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  background-image: linear-gradient(175deg, #6c90d8 0, #6c90d8 50%, #6c90d8 100%);
-  height: 100%;
-  width: 100%;
-}
-.contenedorSection .sectionInfo .ciclos {
-  position: relative;
-  width: 93%;
-  left: 3%;
-  font-size: 1.6rem;
-  margin: 30px 0px 10px 0px;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 20px;
+  width: 70%;
+  left: 15%;
   background-color: rgba(199, 30, 30, 0.644);
 }
-.contenedorSection .sectionInfo h3 {
+.contenedorSection h3 {
   position: relative;
   width: 85%;
   font-size: 1.2rem;
@@ -338,8 +317,49 @@ a {
   margin: 20px 10px;
   left: 5%;
 }
-.contenedorSection .sectionInfo p {
-  line-height: 1.4;
+
+.contenedorTextoPrincipal {
+  position: relative;
+  width: 70%;
+  height: auto;
+  left: 15%;
+  border: 6px solid rgba(199, 30, 30, 0.644);
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(28, 181, 224, 0.4784313725);
+  background: linear-gradient(to right, rgba(28, 181, 224, 0.3764705882), rgba(84, 115, 129, 0.4039215686));
+  margin-bottom: 2rem;
+  grid-area: contenedorTextoPrincipal;
+}
+.contenedorTextoPrincipal p {
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin: 1rem;
+}
+
+.containerFotos {
+  position: relative;
+  left: 0%;
+  grid-area: containerFotos;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerFotos p {
+  position: relative;
+  line-height: normal;
+  width: 15%;
+  right: 0%;
+}
+.containerFotos img {
+  height: 200px;
+  border: 3px solid #6c90d8;
+  border-radius: 100px;
+}
+.containerFotos .fotoVice {
+  position: relative;
+  margin: 10px 0px 10px 20px;
 }
 
 /*Fin Pagina Niveles*/
@@ -559,7 +579,7 @@ main .slideContenedor .barras .active {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: "redesSociales infoFooter";
+  grid-template-areas: "redesSociales";
   height: auto;
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -573,29 +593,13 @@ main .slideContenedor .barras .active {
   align-items: center;
 }
 .containerGridFooter .redesSociales li {
-  padding: 4px;
+  padding: 0px;
 }
 .containerGridFooter .redesSociales .logos {
   display: flex;
-  height: 40px;
+  height: 50px;
   width: auto;
-  border-radius: 20px;
   text-decoration: none;
-}
-.containerGridFooter .infoFooter {
-  grid-area: infoFooter;
-  position: absolute;
-  left: 50%;
-  right: 0;
-  font-size: 12px;
-  width: 120px;
-  height: 5%;
-  text-align: center;
-  background-color: rgba(40, 1, 131, 0.3019607843);
-}
-.containerGridFooter .infoFooter p {
-  font-size: 12px;
-  color: #fff;
 }
 
 .contenedorFlechaArriba {
@@ -629,6 +633,27 @@ main .slideContenedor .barras .active {
 }
 
 /*Fin Parte Footer*/
+@media screen and (min-width: 1591px) {
+  .containerGridMain .sectionPrincipal .contenedorTextoPrincipal {
+    position: relative;
+    width: 71%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .slideContenedor {
+    position: relative;
+    display: flex;
+    flex-direction: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    height: 764px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 122, 0.267);
+  }
+}
 @media screen and (max-width: 768px) {
   .flechita2:before {
     content: "";

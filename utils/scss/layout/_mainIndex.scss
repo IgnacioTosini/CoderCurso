@@ -51,22 +51,6 @@
             width: 70%;
             background-color: $colorFondoTitulos;
         }
-        .contenedorTextoPrincipal{
-            position: relative;
-            width: 70%;
-            height: auto;
-            border: 6px solid rgb(131, 64, 64);
-            border-radius: 10px;
-            padding: 20px;
-            background: #1cb5e07a;
-            background: linear-gradient(to right, #1cb5e060, #54738167);
-            margin-bottom: 2rem;
-            p{
-                font-size: $tamanioParrafos;
-                margin-left: 1rem;
-                margin: 1rem;
-            }
-        }
         img{
             position: relative;
             border: 5px solid #00000060;

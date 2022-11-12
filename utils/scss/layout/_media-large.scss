@@ -1,0 +1,26 @@
+@media screen and (min-width: 1591px) {
+    .containerGridMain {
+        .sectionPrincipal {
+            .contenedorTextoPrincipal {
+                position: relative;
+                width: 71%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main .slideContenedor {
+        position: relative;
+        display: flex;
+        flex-direction: none;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 50%;
+        height: 764px;
+        padding: 20px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 122, 0.267);
+    }
+}
