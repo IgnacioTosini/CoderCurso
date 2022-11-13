@@ -28,6 +28,22 @@
         left: 5%;
     }
 
+    .containerRemerasPoli{
+        position: relative;
+        @include properties-flex(column, center, center);
+        .containerIndi{
+            margin: 10px;
+            img{
+                width: 500px;
+                max-height: 500px;
+            }
+        }
+        p{
+            position: relative;
+            text-align: center;
+            width: 80%;
+        }
+    }
 }
 
 .contenedorTextoPrincipal {
@@ -47,6 +63,22 @@
         font-size: $tamanioParrafos;
         margin-left: 1rem;
         margin: 1rem;
+    }
+    .containerFotosInsti{
+        position: relative;
+        @include properties-flex(row, center, center);
+        img{
+            height:300px;
+            margin: 20px;
+        }
+        .imageUno{
+            position: relative;
+            right: 5%;
+        }
+        .imageDos{
+            position: relative;
+            right: 5%;
+        }
     }
 }
 

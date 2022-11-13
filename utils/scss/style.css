@@ -350,6 +350,25 @@ a {
   margin: 20px 10px;
   left: 5%;
 }
+.contenedorSection .containerRemerasPoli {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorSection .containerRemerasPoli .containerIndi {
+  margin: 10px;
+}
+.contenedorSection .containerRemerasPoli .containerIndi img {
+  width: 500px;
+  max-height: 500px;
+}
+.contenedorSection .containerRemerasPoli p {
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
 
 .contenedorTextoPrincipal {
   position: relative;
@@ -368,6 +387,25 @@ a {
   font-size: 1rem;
   margin-left: 1rem;
   margin: 1rem;
+}
+.contenedorTextoPrincipal .containerFotosInsti {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorTextoPrincipal .containerFotosInsti img {
+  height: 300px;
+  margin: 20px;
+}
+.contenedorTextoPrincipal .containerFotosInsti .imageUno {
+  position: relative;
+  right: 5%;
+}
+.contenedorTextoPrincipal .containerFotosInsti .imageDos {
+  position: relative;
+  right: 5%;
 }
 
 .containerFotos {
@@ -652,6 +690,7 @@ main .slideContenedor .barras .active {
 .containerGridFooter .containerInfoMedio p {
   position: absolute;
   bottom: 0%;
+  color: rgb(185, 184, 184);
 }
 
 .contenedorFlechaArriba {
@@ -725,6 +764,12 @@ main .slideContenedor .barras .active {
     top: 23px;
     left: 50%;
     border-radius: 2px;
+  }
+  .contenedorTextoPrincipal .containerFotosInsti {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio {
@@ -1112,7 +1157,8 @@ main .slideContenedor .barras .active {
   }
   .containerGridFooter .containerInfoMedio p {
     bottom: -97%;
-    left: 0%;
+    left: -16%;
+    font-size: 10px;
   }
   .contenedorFlechaArriba {
     position: fixed;
