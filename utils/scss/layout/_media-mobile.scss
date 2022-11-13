@@ -49,7 +49,8 @@
                 height: 35px;
                 margin: 6px;
             }
-            p{
+
+            p {
                 left: -30%;
             }
         }
@@ -74,13 +75,11 @@
         p {
             position: absolute;
             width: 50px;
-            display: flex;
-            flex-direction: row;
+            @include properties-flex(row, none, center);
             height: 25px;
             bottom: 110%;
             left: -35%;
             padding: 5px;
-            text-align: center;
             visibility: hidden;
         }
 
@@ -93,7 +92,7 @@
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
     .tituloPrincipal {
         font-size: 18px;
     }
@@ -133,7 +132,7 @@
     }
 
     .cicloSuperior {
-        top: 53px;
+        top: 120px;
     }
 
     .flechita {
@@ -160,7 +159,7 @@
     /*Parte Footer*/
     .containerGridFooter {
         .containerInfoMedio {
-            p{
+            p {
                 left: -15%;
                 font-size: 11px;
             }
@@ -186,13 +185,11 @@
         p {
             position: absolute;
             width: 50px;
-            display: flex;
-            flex-direction: row;
+            @include properties-flex(row, none, center);
             height: 25px;
             bottom: 110%;
             left: -35%;
             padding: 5px;
-            text-align: center;
             visibility: hidden;
         }
 
@@ -209,9 +206,7 @@
     .containerGridHeader {
         position: relative;
         height: 180px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        @include properties-grid(1fr, repeat(3, 1fr));
         grid-template-areas:
             "tituloPrincipal"
             "containerMenu"
@@ -263,9 +258,7 @@
     .containerGridHeader {
         position: relative;
         height: 180px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        @include properties-grid(1fr, repeat(5, 1fr));
         grid-template-areas:
             "tituloPrincipal"
             "containerMenu"
@@ -281,11 +274,7 @@
 
     /*Parte Footer*/
     .containerGridFooter {
-        display: grid;
-        grid-template-columns: 1fr;
-        background: #0f0c29;
-        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-        background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+        @include properties-grid(1fr, auto);
         grid-template-areas: "redesSociales";
 
         .containerInfoMedio {
@@ -295,7 +284,7 @@
 
             p {
                 bottom: -97%;
-                left: -16%;
+                left: 1%;
                 font-size: 10px;
             }
         }
@@ -310,13 +299,11 @@
         p {
             position: absolute;
             width: 50px;
-            display: flex;
-            flex-direction: row;
+            @include properties-flex(row, none, center);
             height: 25px;
             bottom: 110%;
             right: 50%;
             padding: 5px;
-            text-align: center;
             visibility: hidden;
         }
 

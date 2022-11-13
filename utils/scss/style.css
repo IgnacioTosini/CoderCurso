@@ -394,6 +394,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .contenedorTextoPrincipal .containerFotosInsti img {
   height: 300px;
@@ -540,10 +541,19 @@ main .slideContenedor .barras .active {
   height: 100%;
   width: 100%;
 }
-.contenedorSection .sectionInfo .ciclos {
-  width: 90%;
-  margin: 30px 0px 25px 0px;
-  background-color: rgba(199, 30, 30, 0.644);
+.contenedorSection .sectionInfo .containerFotosEspecialidades {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+.contenedorSection .sectionInfo .containerFotosEspecialidades img {
+  position: relative;
+  height: 200px;
+  margin: 20px;
 }
 .contenedorSection .sectionInfo h2 {
   position: relative;
@@ -765,11 +775,27 @@ main .slideContenedor .barras .active {
     left: 50%;
     border-radius: 2px;
   }
-  .contenedorTextoPrincipal .containerFotosInsti {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .contenedorTextoPrincipal {
+    width: 95%;
+    left: 3%;
+  }
+  .contenedorSection .sectionInfo .containerFotosEspecialidades .imageUno {
+    position: relative;
+    right: 0%;
+    width: 85%;
+  }
+  .contenedorSection .sectionInfo .containerFotosEspecialidades .imageDos {
+    position: relative;
+    right: 0%;
+    width: 84%;
+  }
+  .containerGridMain .aside_Container .containerNoticias {
+    position: relative;
+    height: 64%;
+  }
+  .containerGridMain .aside_Container .containerNoticias iframe {
+    position: relative;
+    height: 50%;
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio {
@@ -989,11 +1015,12 @@ main .slideContenedor .barras .active {
     width: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: none;
+    align-items: center;
     height: 25px;
     bottom: 110%;
     left: -35%;
     padding: 5px;
-    text-align: center;
     visibility: hidden;
   }
   .contenedorFlechaArriba:hover p {
@@ -1003,7 +1030,7 @@ main .slideContenedor .barras .active {
     border-radius: 5px;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 412px) {
   .tituloPrincipal {
     font-size: 18px;
   }
@@ -1037,7 +1064,7 @@ main .slideContenedor .barras .active {
     border-radius: 2px;
   }
   .cicloSuperior {
-    top: 53px;
+    top: 120px;
   }
   .flechita {
     visibility: hidden;
@@ -1076,11 +1103,12 @@ main .slideContenedor .barras .active {
     width: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: none;
+    align-items: center;
     height: 25px;
     bottom: 110%;
     left: -35%;
     padding: 5px;
-    text-align: center;
     visibility: hidden;
   }
   .contenedorFlechaArriba:hover p {
@@ -1095,8 +1123,8 @@ main .slideContenedor .barras .active {
     position: relative;
     height: 180px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
   main .slideContenedor {
@@ -1134,8 +1162,8 @@ main .slideContenedor .barras .active {
     position: relative;
     height: 180px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu" "containerMenu" "containerMenu";
   }
   .tituloPrincipal {
@@ -1144,10 +1172,8 @@ main .slideContenedor .barras .active {
   /*Parte Footer*/
   .containerGridFooter {
     display: grid;
-    grid-template-columns: 1fr;
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "redesSociales";
   }
   .containerGridFooter .containerInfoMedio {
@@ -1157,7 +1183,7 @@ main .slideContenedor .barras .active {
   }
   .containerGridFooter .containerInfoMedio p {
     bottom: -97%;
-    left: -16%;
+    left: 1%;
     font-size: 10px;
   }
   .contenedorFlechaArriba {
@@ -1171,11 +1197,12 @@ main .slideContenedor .barras .active {
     width: 50px;
     display: flex;
     flex-direction: row;
+    justify-content: none;
+    align-items: center;
     height: 25px;
     bottom: 110%;
     right: 50%;
     padding: 5px;
-    text-align: center;
     visibility: hidden;
   }
   .contenedorFlechaArriba:hover p {

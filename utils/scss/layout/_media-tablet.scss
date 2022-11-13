@@ -14,9 +14,40 @@
         border-radius: 2px;
     }
 
-    .contenedorTextoPrincipal{
-        .containerFotosInsti {
-            @include properties-flex(column, center, center);
+    .contenedorTextoPrincipal {
+        width: 95%;
+        left: 3%;
+    }
+
+    .contenedorSection {
+        .sectionInfo {
+            .containerFotosEspecialidades {
+                .imageUno {
+                    position: relative;
+                    right: 0%;
+                    width: 85%;
+                }
+
+                .imageDos {
+                    position: relative;
+                    right: 0%;
+                    width: 84%;
+                }
+            }
+        }
+    }
+
+    .containerGridMain {
+        .aside_Container {
+            .containerNoticias {
+                position: relative;
+                height: 64%;
+
+                iframe {
+                    position: relative;
+                    height: 50%;
+                }
+            }
         }
     }
 
@@ -105,7 +136,8 @@
                 height: 50px;
                 margin: 6px;
             }
-            p{
+
+            p {
                 left: -17%;
             }
         }
@@ -181,7 +213,8 @@
                 height: 40px;
                 margin: 6px;
             }
-            p{
+
+            p {
                 font-size: 13px;
                 left: -22%;
             }

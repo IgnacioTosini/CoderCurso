@@ -67,6 +67,7 @@
     .containerFotosInsti{
         position: relative;
         @include properties-flex(row, center, center);
+        flex-wrap: wrap;
         img{
             height:300px;
             margin: 20px;

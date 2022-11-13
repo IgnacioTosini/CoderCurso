@@ -12,12 +12,17 @@
         height: 100%;
         width: 100%;
 
-        .ciclos {
-            width: 90%;
-            margin: 30px 0px 25px 0px;
-            background-color: rgba(199, 30, 30, 0.644);
+        .containerFotosEspecialidades{
+            position: relative;
+            @include properties-flex(row, center, center);
+            flex-wrap: wrap;
+            height: auto;
+            img{
+                position: relative;
+                height: 200px;
+                margin: 20px;
+            }
         }
-
         h2 {
             position: relative;
             width: 85%;
