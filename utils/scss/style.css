@@ -273,7 +273,7 @@ a {
   border: 5px solid rgba(0, 0, 0, 0.3764705882);
   border-radius: 10px;
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
 .containerGridMain .sectionPrincipal .containerGaleriaIndex {
   position: relative;
@@ -293,7 +293,6 @@ a {
 }
 .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .imageUno {
   width: 70%;
-  margin-top: -80px;
   left: 15%;
 }
 .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual p {
@@ -360,10 +359,6 @@ a {
 .contenedorSection .containerRemerasPoli .containerIndi {
   margin: 10px;
 }
-.contenedorSection .containerRemerasPoli .containerIndi img {
-  width: 500px;
-  max-height: 500px;
-}
 .contenedorSection .containerRemerasPoli p {
   position: relative;
   text-align: center;
@@ -425,7 +420,6 @@ a {
   right: 0%;
 }
 .containerFotos img {
-  height: 200px;
   border: 3px solid #6c90d8;
   border-radius: 100px;
 }
@@ -446,7 +440,7 @@ main .slideContenedor {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 50%;
+  width: 70%;
   height: 700px;
   padding: 20px;
   overflow: hidden;
@@ -463,16 +457,13 @@ main .slideContenedor .miSlider p {
   position: absolute;
   top: 4%;
   left: 0%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   padding: 5px;
   width: 100%;
   height: auto;
   border-radius: 5px;
   background-color: rgba(0, 60, 94, 0.4039215686);
   color: #dbdbdb;
+  text-align: center;
 }
 main .slideContenedor .miSlider .acomodoFoto {
   top: 2%;
@@ -552,7 +543,6 @@ main .slideContenedor .barras .active {
 }
 .contenedorSection .sectionInfo .containerFotosEspecialidades img {
   position: relative;
-  height: 200px;
   margin: 20px;
 }
 .contenedorSection .sectionInfo h2 {
@@ -679,8 +669,6 @@ main .slideContenedor .barras .active {
 }
 .containerGridFooter .redesSociales .logos {
   display: flex;
-  height: 50px;
-  width: auto;
   text-decoration: none;
 }
 .containerGridFooter .containerInfoMedio {
@@ -694,7 +682,6 @@ main .slideContenedor .barras .active {
 }
 .containerGridFooter .containerInfoMedio img {
   position: relative;
-  height: 50px;
   margin: 25px;
 }
 .containerGridFooter .containerInfoMedio p {
@@ -835,13 +822,7 @@ main .slideContenedor .barras .active {
   }
   main .slideContenedor {
     position: relative;
-    width: 75%;
-  }
-}
-@media screen and (max-width: 720px) {
-  main .slideContenedor {
-    position: relative;
-    width: 85%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -872,7 +853,8 @@ main .slideContenedor .barras .active {
     grid-area: redesSociales;
     display: flex;
     flex-direction: row;
-    align-content: center;
+    justify-content: none;
+    align-items: center;
     flex-wrap: wrap;
   }
 }
@@ -891,8 +873,8 @@ main .slideContenedor .barras .active {
     position: relative;
     height: 150px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
   .containerGridMain {
@@ -985,13 +967,11 @@ main .slideContenedor .barras .active {
     position: relative;
     height: auto;
     width: 100%;
-    top: 60px;
   }
   .containerGridMain .sectionPrincipal .containerMap {
     position: relative;
     margin: 20px;
     text-align: center;
-    top: 30px;
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio {

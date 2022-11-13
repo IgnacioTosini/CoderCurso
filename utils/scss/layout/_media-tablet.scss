@@ -98,14 +98,7 @@
 
     main .slideContenedor {
         position: relative;
-        width: 75%;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    main .slideContenedor {
-        position: relative;
-        width: 85%;
+        width: 90%;
     }
 }
 
@@ -144,9 +137,7 @@
 
         .redesSociales {
             grid-area: redesSociales;
-            display: flex;
-            flex-direction: row;
-            align-content: center;
+            @include properties-flex(row, none, center);
             flex-wrap: wrap;
         }
     }
@@ -168,9 +159,7 @@
     .containerGridHeader {
         position: relative;
         height: 150px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        @include properties-grid(1fr, repeat(3,1fr));
         grid-template-areas:
             "tituloPrincipal"
             "containerMenu"

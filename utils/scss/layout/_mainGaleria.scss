@@ -5,7 +5,7 @@ main{
         position: relative;
         @include properties-flex(none, center, center);
         margin: auto;
-        width: 50%;
+        width: 70%;
         height: 700px;
         padding: 20px;
         overflow: hidden;
@@ -23,13 +23,13 @@ main{
                 position: absolute;
                 top: 4%;
                 left: 0%;
-                @include properties-flex(row, center, center);
                 padding: 5px;
                 width: 100%;
                 height: auto;
                 border-radius: 5px;
                 background-color: #003c5e67;
                 color: #dbdbdb;
+                text-align: center;
             }
             .acomodoFoto{
                 top: 2%;
