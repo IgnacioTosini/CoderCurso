@@ -10,16 +10,14 @@
   height: 135px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "tituloPrincipal" "containerMenu";
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
 }
 
 .logo {
   position: absolute;
   top: 0;
   left: 50px;
-  width: 70px;
-  height: 70px;
   z-index: 1;
 }
 
@@ -27,8 +25,6 @@
   position: absolute;
   top: 0;
   right: 50px;
-  width: 70px;
-  height: 70px;
   z-index: 1;
 }
 
@@ -529,8 +525,6 @@ main .slideContenedor .barras .active {
 .contenedorSection .sectionInfo {
   position: relative;
   background-image: linear-gradient(175deg, #6c90d8 0, #6c90d8 50%, #6c90d8 100%);
-  height: 100%;
-  width: 100%;
 }
 .contenedorSection .sectionInfo .containerFotosEspecialidades {
   position: relative;
@@ -776,17 +770,33 @@ main .slideContenedor .barras .active {
     right: 0%;
     width: 84%;
   }
-  .containerGridMain .aside_Container .containerNoticias {
+  .containerGridMain {
+    display: grid;
     position: relative;
-    height: 64%;
+    width: 100%;
+    height: auto;
   }
-  .containerGridMain .aside_Container .containerNoticias iframe {
+  main .slideContenedor {
     position: relative;
-    height: 50%;
+    width: 100%;
   }
-  /*Parte Footer*/
-  .containerGridFooter .containerInfoMedio {
-    right: 15%;
+  .containerGridFooter {
+    grid-template-areas: "redesSociales containerInfoMedio";
+  }
+  .containerGridFooter .containerInfoMedio img {
+    height: 50px;
+    margin: 6px;
+  }
+  .containerGridFooter .containerInfoMedio p {
+    left: -17%;
+  }
+  .containerGridFooter .redesSociales {
+    grid-area: redesSociales;
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .contenedorFlechaArriba {
     position: fixed;
@@ -825,39 +835,6 @@ main .slideContenedor .barras .active {
     width: 90%;
   }
 }
-@media screen and (max-width: 640px) {
-  .containerGridMain {
-    display: grid;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  main .slideContenedor {
-    position: relative;
-    width: 85%;
-  }
-  .aside_Container {
-    height: 1100px;
-  }
-  .containerGridFooter {
-    grid-template-areas: "redesSociales containerInfoMedio";
-  }
-  .containerGridFooter .containerInfoMedio img {
-    height: 50px;
-    margin: 6px;
-  }
-  .containerGridFooter .containerInfoMedio p {
-    left: -17%;
-  }
-  .containerGridFooter .redesSociales {
-    grid-area: redesSociales;
-    display: flex;
-    flex-direction: row;
-    justify-content: none;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-}
 @media screen and (max-width: 617px) {
   .tituloPrincipal {
     font-size: 20px;
@@ -876,18 +853,6 @@ main .slideContenedor .barras .active {
     grid-template-columns: repeat(1fr, 1fr);
     grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
-  }
-  .containerGridMain {
-    display: grid;
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture img {
-    width: 80%;
-  }
-  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .centrado {
-    left: 10%;
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio img {
@@ -1027,10 +992,6 @@ main .slideContenedor .barras .active {
   .logo2 {
     right: 10px;
   }
-  main .slideContenedor {
-    position: relative;
-    width: 95%;
-  }
   .segundoSubmenu {
     top: 88px;
     right: 120px;
@@ -1069,7 +1030,7 @@ main .slideContenedor .barras .active {
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio p {
-    left: -15%;
+    left: 0%;
     font-size: 11px;
   }
   .contenedorFlechaArriba {
@@ -1113,11 +1074,6 @@ main .slideContenedor .barras .active {
     grid-template-columns: repeat(1fr, 1fr);
     grid-template-rows: repeat(1fr, 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
-  }
-  main .slideContenedor {
-    position: relative;
-    width: 100%;
-    margin: 0;
   }
   .contenedorFlechaArriba {
     position: fixed;
@@ -1169,7 +1125,7 @@ main .slideContenedor .barras .active {
     left: 0%;
   }
   .containerGridFooter .containerInfoMedio p {
-    bottom: -97%;
+    bottom: -92%;
     left: 1%;
     font-size: 10px;
   }

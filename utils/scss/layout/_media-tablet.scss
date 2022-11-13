@@ -38,23 +38,34 @@
     }
 
     .containerGridMain {
-        .aside_Container {
-            .containerNoticias {
-                position: relative;
-                height: 64%;
-
-                iframe {
-                    position: relative;
-                    height: 50%;
-                }
-            }
-        }
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 
-    /*Parte Footer*/
+    main .slideContenedor {
+        position: relative;
+        width: 100%;
+    }
+
     .containerGridFooter {
+        grid-template-areas: "redesSociales containerInfoMedio";
         .containerInfoMedio {
-            right: 15%;
+            img {
+                height: 50px;
+                margin: 6px;
+            }
+
+            p {
+                left: -17%;
+            }
+        }
+
+        .redesSociales {
+            grid-area: redesSociales;
+            @include properties-flex(row, none, center);
+            flex-wrap: wrap;
         }
     }
 
@@ -102,47 +113,6 @@
     }
 }
 
-@media screen and (max-width: 640px) {
-    .containerGridMain {
-        display: grid;
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    main .slideContenedor {
-        position: relative;
-        width: 85%;
-    }
-
-    .aside_Container {
-        height: 1100px;
-    }
-
-    .containerGridFooter {
-        grid-template-areas: "redesSociales containerInfoMedio";
-    }
-
-    .containerGridFooter {
-        .containerInfoMedio {
-            img {
-                height: 50px;
-                margin: 6px;
-            }
-
-            p {
-                left: -17%;
-            }
-        }
-
-        .redesSociales {
-            grid-area: redesSociales;
-            @include properties-flex(row, none, center);
-            flex-wrap: wrap;
-        }
-    }
-}
-
 @media screen and (max-width: 617px) {
     .tituloPrincipal {
         font-size: 20px;
@@ -164,29 +134,6 @@
             "tituloPrincipal"
             "containerMenu"
             "containerMenu";
-    }
-
-    .containerGridMain {
-        display: grid;
-        position: relative;
-        width: 100%;
-        height: auto;
-
-        .sectionPrincipal {
-            .containerGaleriaIndex {
-                .containerIndividual {
-                    picture {
-                        img {
-                            width: 80%;
-                        }
-
-                        .centrado {
-                            left: 10%;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     /*Parte Footer*/

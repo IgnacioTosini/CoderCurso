@@ -120,11 +120,6 @@
         right: 10px;
     }
 
-    main .slideContenedor {
-        position: relative;
-        width: 95%;
-    }
-
     .segundoSubmenu {
         top: 88px;
         right: 120px;
@@ -175,7 +170,7 @@
     .containerGridFooter {
         .containerInfoMedio {
             p {
-                left: -15%;
+                left: 0%;
                 font-size: 11px;
             }
         }
@@ -227,12 +222,6 @@
             "containerMenu"
             "containerMenu"
         ;
-    }
-
-    main .slideContenedor {
-        position: relative;
-        width: 100%;
-        margin: 0;
     }
 
     .contenedorFlechaArriba {
@@ -299,7 +288,7 @@
             left: 0%;
 
             p {
-                bottom: -97%;
+                bottom: -92%;
                 left: 1%;
                 font-size: 10px;
             }

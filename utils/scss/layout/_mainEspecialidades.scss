@@ -9,10 +9,8 @@
                 #6c90d8 0,
                 #6c90d8 50%,
                 #6c90d8 100%);
-        height: 100%;
-        width: 100%;
 
-        .containerFotosEspecialidades{
+            .containerFotosEspecialidades{
             position: relative;
             @include properties-flex(row, center, center);
             flex-wrap: wrap;
