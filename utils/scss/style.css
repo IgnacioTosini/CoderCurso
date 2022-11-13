@@ -241,7 +241,7 @@ a {
   padding-top: 10px;
   width: 90%;
 }
-.containerGridMain .aside_Container h3 {
+.containerGridMain .aside_Container h2 {
   font-size: x-large;
   text-align: center;
   background: #1f4037;
@@ -292,9 +292,9 @@ a {
   width: 50%;
 }
 .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .imageUno {
-  width: 700px;
-  height: 500px;
+  width: 70%;
   margin-top: -80px;
+  left: 15%;
 }
 .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual p {
   margin-top: 30px;
@@ -342,7 +342,7 @@ a {
   left: 15%;
   background-color: rgba(199, 30, 30, 0.644);
 }
-.contenedorSection h3 {
+.contenedorSection .subtitle {
   position: relative;
   width: 85%;
   font-size: 1.2rem;
@@ -447,7 +447,7 @@ main .slideContenedor {
   align-items: center;
   margin: auto;
   width: 50%;
-  height: 620px;
+  height: 700px;
   padding: 20px;
   overflow: hidden;
   background-color: rgba(0, 0, 122, 0.267);
@@ -647,7 +647,7 @@ main .slideContenedor .barras .active {
 .infoContacto {
   background: rgba(0, 0, 0, 0.534);
 }
-.infoContacto h4,
+.infoContacto h2,
 .infoContacto ul,
 .infoContacto p {
   text-align: center;
@@ -904,11 +904,6 @@ main .slideContenedor .barras .active {
   .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture img {
     width: 80%;
   }
-  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .imageUno {
-    width: 700px;
-    height: 500px;
-    margin-top: -50px;
-  }
   .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .centrado {
     left: 10%;
   }
@@ -985,6 +980,18 @@ main .slideContenedor .barras .active {
     position: absolute;
     top: 38%;
     left: 18%;
+  }
+  .containerGridMain .sectionPrincipal .containerGaleriaIndex {
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: 60px;
+  }
+  .containerGridMain .sectionPrincipal .containerMap {
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    top: 30px;
   }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio {
