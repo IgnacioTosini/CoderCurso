@@ -1,8 +1,9 @@
 /*Parte Footer*/
 .containerGridFooter {
+    position: relative;
     @include properties-grid(1,1);
-    grid-template-areas: "redesSociales";
-    height: auto;
+    grid-template-areas: "redesSociales containerInfoMedio";
+    height: 120px;
     background: #0f0c29;
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -19,13 +20,29 @@
             text-decoration: none;
         }
     }
+    .containerInfoMedio{
+        position: relative;
+        @include properties-flex(row, center, center);
+        grid-area: containerInfoMedio;
+        right: 70%;
+
+        img{
+            position: relative;
+            height: 50px;
+            margin: 25px;
+        }
+        p{
+            position: absolute;
+            bottom: 0%;
+        }
+    }
 }
 
 .contenedorFlechaArriba {
     position: fixed;
     width: 7%;
     right: 0%;
-    bottom: 1%;
+    bottom: 3%;
     p {
         position: absolute;
         width: 50px;

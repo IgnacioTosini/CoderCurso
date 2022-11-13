@@ -256,9 +256,9 @@ a {
 .containerGridMain .sectionPrincipal {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-image: linear-gradient(180deg, #9fb7f5 0, #6c90d8 50%, #2c6bbb 100%);
   padding: 20px;
-  justify-content: center;
 }
 .containerGridMain .sectionPrincipal h2 {
   font-size: 1.3rem;
@@ -272,8 +272,41 @@ a {
   position: relative;
   border: 5px solid rgba(0, 0, 0, 0.3764705882);
   border-radius: 10px;
-  width: 70%;
-  left: 15%;
+  width: 100%;
+  height: 80%;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture img {
+  width: 50%;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .imageUno {
+  width: 700px;
+  height: 500px;
+  margin-top: -80px;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual .textoUno {
+  position: relative;
+  width: 80%;
+}
+.containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual .centrado {
+  left: 25%;
 }
 .containerGridMain .sectionPrincipal .containerMap {
   position: relative;
@@ -576,11 +609,12 @@ main .slideContenedor .barras .active {
 
 /*Parte Footer*/
 .containerGridFooter {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: "redesSociales";
-  height: auto;
+  grid-template-areas: "redesSociales containerInfoMedio";
+  height: 120px;
   background: #0f0c29;
   background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
   background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
@@ -601,12 +635,30 @@ main .slideContenedor .barras .active {
   width: auto;
   text-decoration: none;
 }
+.containerGridFooter .containerInfoMedio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-area: containerInfoMedio;
+  right: 70%;
+}
+.containerGridFooter .containerInfoMedio img {
+  position: relative;
+  height: 50px;
+  margin: 25px;
+}
+.containerGridFooter .containerInfoMedio p {
+  position: absolute;
+  bottom: 0%;
+}
 
 .contenedorFlechaArriba {
   position: fixed;
   width: 7%;
   right: 0%;
-  bottom: 1%;
+  bottom: 3%;
 }
 .contenedorFlechaArriba p {
   position: absolute;
@@ -654,6 +706,11 @@ main .slideContenedor .barras .active {
     background-color: rgba(0, 0, 122, 0.267);
   }
 }
+@media screen and (max-width: 1025px) {
+  .containerGridFooter .containerInfoMedio {
+    right: 30%;
+  }
+}
 @media screen and (max-width: 768px) {
   .flechita2:before {
     content: "";
@@ -670,6 +727,9 @@ main .slideContenedor .barras .active {
     border-radius: 2px;
   }
   /*Parte Footer*/
+  .containerGridFooter .containerInfoMedio {
+    right: 15%;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 7%;
@@ -727,6 +787,23 @@ main .slideContenedor .barras .active {
   .aside_Container {
     height: 1100px;
   }
+  .containerGridFooter {
+    grid-template-areas: "redesSociales containerInfoMedio";
+  }
+  .containerGridFooter .containerInfoMedio img {
+    height: 50px;
+    margin: 6px;
+  }
+  .containerGridFooter .containerInfoMedio p {
+    left: -17%;
+  }
+  .containerGridFooter .redesSociales {
+    grid-area: redesSociales;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 617px) {
   .tituloPrincipal {
@@ -753,7 +830,26 @@ main .slideContenedor .barras .active {
     width: 100%;
     height: auto;
   }
+  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture img {
+    width: 80%;
+  }
+  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .imageUno {
+    width: 700px;
+    height: 500px;
+    margin-top: -50px;
+  }
+  .containerGridMain .sectionPrincipal .containerGaleriaIndex .containerIndividual picture .centrado {
+    left: 10%;
+  }
   /*Parte Footer*/
+  .containerGridFooter .containerInfoMedio img {
+    height: 40px;
+    margin: 6px;
+  }
+  .containerGridFooter .containerInfoMedio p {
+    font-size: 13px;
+    left: -22%;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 7%;
@@ -820,6 +916,16 @@ main .slideContenedor .barras .active {
     left: 18%;
   }
   /*Parte Footer*/
+  .containerGridFooter .containerInfoMedio {
+    right: 5%;
+  }
+  .containerGridFooter .containerInfoMedio img {
+    height: 35px;
+    margin: 6px;
+  }
+  .containerGridFooter .containerInfoMedio p {
+    left: -30%;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 7%;
@@ -903,6 +1009,10 @@ main .slideContenedor .barras .active {
     top: 12px;
   }
   /*Parte Footer*/
+  .containerGridFooter .containerInfoMedio p {
+    left: -15%;
+    font-size: 11px;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 7%;
@@ -955,6 +1065,13 @@ main .slideContenedor .barras .active {
     right: 10%;
     bottom: 3%;
   }
+  .containerGridFooter .containerInfoMedio {
+    right: 5%;
+  }
+  .containerGridFooter .containerInfoMedio img {
+    height: 30px;
+    margin: 6px;
+  }
 }
 @media screen and (max-width: 350px) {
   .tituloPrincipal {
@@ -984,12 +1101,18 @@ main .slideContenedor .barras .active {
     display: grid;
     grid-template-columns: 1fr;
     background: #0f0c29;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     grid-template-areas: "redesSociales";
+  }
+  .containerGridFooter .containerInfoMedio {
+    right: 0%;
+    bottom: 62px;
+    left: 0%;
+  }
+  .containerGridFooter .containerInfoMedio p {
+    bottom: -97%;
+    left: 0%;
   }
   .contenedorFlechaArriba {
     position: fixed;

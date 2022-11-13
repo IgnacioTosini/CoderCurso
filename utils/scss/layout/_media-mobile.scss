@@ -1,4 +1,5 @@
 @media screen and (max-width: 480px) {
+
     .logo,
     .logo2 {
         position: absolute;
@@ -29,7 +30,7 @@
         border-radius: 2px;
     }
 
-    .containerGridMain{
+    .containerGridMain {
         .aside_Container {
             .containerMap {
                 position: absolute;
@@ -40,6 +41,20 @@
     }
 
     /*Parte Footer*/
+    .containerGridFooter {
+        .containerInfoMedio {
+            right: 5%;
+
+            img {
+                height: 35px;
+                margin: 6px;
+            }
+            p{
+                left: -30%;
+            }
+        }
+    }
+
     .contenedorFlechaArriba {
         position: fixed;
         width: 7%;
@@ -125,14 +140,15 @@
         visibility: hidden;
     }
 
-    .containerGridMain{
+    .containerGridMain {
         .aside_Container {
             .containerMap {
                 position: absolute;
                 top: 37%;
                 left: 25%;
                 width: 50%;
-                p{
+
+                p {
                     position: relative;
                     font-size: 15px;
                     top: 12px;
@@ -142,6 +158,15 @@
     }
 
     /*Parte Footer*/
+    .containerGridFooter {
+        .containerInfoMedio {
+            p{
+                left: -15%;
+                font-size: 11px;
+            }
+        }
+    }
+
     .contenedorFlechaArriba {
         position: fixed;
         width: 7%;
@@ -206,6 +231,18 @@
         right: 10%;
         bottom: 3%;
     }
+
+    .containerGridFooter {
+        .containerInfoMedio {
+            right: 5%;
+
+            img {
+                height: 30px;
+                margin: 6px;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 350px) {
@@ -247,12 +284,20 @@
         display: grid;
         grid-template-columns: 1fr;
         background: #0f0c29;
-        /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-        /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         grid-template-areas: "redesSociales";
+
+        .containerInfoMedio {
+            right: 0%;
+            bottom: 62px;
+            left: 0%;
+
+            p {
+                bottom: -97%;
+                left: 0%;
+            }
+        }
     }
 
     .contenedorFlechaArriba {

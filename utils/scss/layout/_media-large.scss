@@ -24,3 +24,11 @@
         background-color: rgba(0, 0, 122, 0.267);
     }
 }
+
+@media screen and (max-width: 1025px) {
+    .containerGridFooter{
+        .containerInfoMedio {
+            right: 30%;
+        }
+    }
+}

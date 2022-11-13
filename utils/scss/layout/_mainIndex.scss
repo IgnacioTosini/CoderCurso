@@ -8,16 +8,18 @@
         position: relative;
         background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
-        .containerNoticias{
+        .containerNoticias {
             position: relative;
             height: 95%;
-            iframe{
+
+            iframe {
                 position: relative;
                 left: 5%;
                 padding-top: 10px;
                 width: 90%;
             }
         }
+
         h3 {
             font-size: x-large;
             text-align: center;
@@ -32,18 +34,20 @@
             margin: 0 20px 0 20px;
         }
     }
+
     /*Fin Aside*/
     /*Seccion Principal*/
     .sectionPrincipal {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         background-image: linear-gradient(180deg,
                 #9fb7f5 0,
                 #6c90d8 50%,
                 #2c6bbb 100%);
         padding: 20px;
-        justify-content: center;
-        h2{
+
+        h2 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
             text-align: center;
@@ -51,26 +55,70 @@
             width: 70%;
             background-color: $colorFondoTitulos;
         }
-        img{
+
+        img {
             position: relative;
             border: 5px solid #00000060;
             border-radius: 10px;
-            width: 70%;
-            left: 15%;
+            width: 100%;
+            height: 80%;
         }
-        .containerMap{
+
+        .containerGaleriaIndex {
+            position: relative;
+            height: auto;
+            width: 100%;
+
+            .containerIndividual {
+                position: relative;
+                @include properties-flex(column, center, center);
+                margin: 20px;
+
+                picture {
+                    img {
+                        width: 50%;
+                    }
+
+                    .imageUno {
+                        width: 700px;
+                        height: 500px;
+                        margin-top: -80px;
+                    }
+                }
+
+                p {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+
+                .textoUno {
+                    position: relative;
+                    width: 80%;
+                }
+
+                .centrado {
+                    left: 25%;
+                }
+            }
+        }
+
+        .containerMap {
             position: relative;
             margin: 20px;
             text-align: center;
-            .locationPoli{
+
+            .locationPoli {
                 margin: 5px 10px;
                 border: 5px solid #00000060;
                 border-radius: 10px;
             }
-            p{
+
+            p {
                 background-color: #0000002c;
             }
         }
     }
-/*Fin Seccion Principal*/
+
+    /*Fin Seccion Principal*/
 }
