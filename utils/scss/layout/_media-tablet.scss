@@ -49,6 +49,14 @@
         width: 100%;
     }
 
+    .aside_Container{
+        .containerNoticias{
+            iframe{
+                height: 35%;
+            }
+        }
+    }
+
     .containerGridFooter {
         grid-template-areas: "redesSociales containerInfoMedio";
         .containerInfoMedio {
