@@ -8,5 +8,5 @@
 @mixin properties-grid($columns, $row){
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
-    grid-template-rows: repeat($columns, 1fr);
+    grid-template-rows: repeat($row, 1fr);
 }

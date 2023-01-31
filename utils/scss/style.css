@@ -590,7 +590,7 @@ main .slideContenedor .barras .active {
 .contact-form form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(0, 1fr);
 }
 .contact-form form label {
   display: block;
@@ -637,6 +637,54 @@ main .slideContenedor .barras .active {
   text-align: center;
   margin: 0 0 1rem 0;
   color: white;
+}
+
+.containerGridMain {
+  display: grid;
+  position: relative;
+  width: 100%;
+}
+.containerGridMain .containerMainTienda {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin: 50px 40px 50px 70px;
+}
+.containerGridMain .containerMainTienda .containerProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  background-color: rgba(0, 162, 255, 0.418);
+  padding: 20px;
+  width: 250px;
+  height: 360px;
+  max-height: 360px;
+  border-radius: 5px;
+}
+.containerGridMain .containerMainTienda .containerProducto button {
+  background-color: rgb(104, 50, 205);
+  border-radius: 100px;
+  width: 120px;
+}
+.containerGridMain .containerMainTienda .containerProducto img {
+  min-height: 210px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.containerGridMain .containerMainTienda .containerProducto .nombreProducto {
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.438);
+  width: 100px;
+  max-width: 200px;
+  max-height: 50px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 /*Parte Footer*/
@@ -854,7 +902,7 @@ main .slideContenedor .barras .active {
     height: 150px;
     display: grid;
     grid-template-columns: repeat(1fr, 1fr);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-rows: repeat(repeat(3, 1fr), 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
   /*Parte Footer*/
@@ -1075,7 +1123,7 @@ main .slideContenedor .barras .active {
     height: 180px;
     display: grid;
     grid-template-columns: repeat(1fr, 1fr);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-rows: repeat(repeat(3, 1fr), 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
   .contenedorFlechaArriba {
@@ -1109,7 +1157,7 @@ main .slideContenedor .barras .active {
     height: 180px;
     display: grid;
     grid-template-columns: repeat(1fr, 1fr);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-rows: repeat(repeat(5, 1fr), 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu" "containerMenu" "containerMenu";
   }
   .tituloPrincipal {
@@ -1119,7 +1167,7 @@ main .slideContenedor .barras .active {
   .containerGridFooter {
     display: grid;
     grid-template-columns: repeat(1fr, 1fr);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     grid-template-areas: "redesSociales";
   }
   .containerGridFooter .containerInfoMedio {
