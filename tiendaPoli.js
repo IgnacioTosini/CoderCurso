@@ -1,9 +1,10 @@
 class Producto {
-    constructor(nombreProducto, precio, stock, imagenProducto) {
+    constructor(nombreProducto, precio, stock, cantidad, imagenProducto) {
         this.nombreProducto = nombreProducto;
         this.precio = precio;
         this.stock = stock;
         this.imagenProducto = imagenProducto;
+        this.cantidad = cantidad;
     }
 }
 
@@ -30,24 +31,30 @@ function renderProducto(){
         const botonMas = document.createElement("button");
         botonMas.className = "button";
         botonMas.innerHTML = "+";
-        const contador = document.createElement("p");
+        botonMas.onclick = () => {if(contador.value < producto.stock) contador.value++;};
+        const contador = document.createElement("input");
         contador.className = "contador";
-        contador.innerHTML = 0;
+        contador.value = 0;
+        contador.onchange = () => {if(contador.value > producto.stock) contador.value = producto.stock};
         const botonMenos = document.createElement("button");
         botonMenos.className = "button";
         botonMenos.innerHTML = "-";
-
+        botonMenos.onclick = () => {if(contador.value > 0) contador.value--;};
+        const agregarProducto = document.createElement("button");
+        agregarProducto.innerHTML = "Agregar Producto";
+        agregarProducto.onclick = () => {alert(contador.value)};
         div.append(pNombre);
         div.append(img);
         div.append(botonMas);
         div.append(contador);
         div.append(botonMenos);
+        div.append(agregarProducto);
         containerMainTienda.append(div);
     }
 }
 
-function agregarProducto(nombre, precio, stock, imagenProducto) {
-    const producto = new Producto(nombre, precio, stock, imagenProducto);
+function agregarProducto(nombre, precio, stock, cantidad, imagenProducto) {
+    const producto = new Producto(nombre, precio, stock, cantidad, imagenProducto);
     producto.nombreProducto = producto.nombreProducto.charAt().toUpperCase() + producto.nombreProducto.slice(1);
     tienda.push(producto);
     renderProducto();
@@ -59,15 +66,15 @@ let continuar = "s";
 const containerMainTienda = document.getElementById("containerMainTienda");
 const tienda = [];
 
-agregarProducto("remera", 200, 10, "../img/imgRemeraMangaLargaDanza.jpg");
-agregarProducto("buzo", 500, 50, "../img/imgBuzoPolivalenteDeArte.jpg");
-agregarProducto("pantalon", 300, 5, "../img/remerasDelPoli.jpg");
-agregarProducto("campera", 800, 8, "../img/visualesUno.jpeg");
-agregarProducto("mochila", 1200, 3, "../img/imgBuzoPolivalenteDeArte.jpg");
-agregarProducto("calculadora", 2000, 15, "../img/imgBuzoPolivalenteDeArte.jpg");
-agregarProducto("lapices", 100, 100, "../img/imgBuzoPolivalenteDeArte.jpg");
-agregarProducto("goma", 200, 60, "../img/imgBuzoPolivalenteDeArte.jpg");
-agregarProducto("cuaderno", 400, 80, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("remera", 200, 10, 0, "../img/imgRemeraMangaLargaDanza.jpg");
+agregarProducto("buzo", 500, 5, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("pantalon", 300, 5, 0, "../img/remerasDelPoli.jpg");
+agregarProducto("campera", 800, 8, 0, "../img/visualesUno.jpeg");
+agregarProducto("mochila", 1200, 3, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("calculadora", 2000, 15, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("lapices", 100, 100, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("goma", 200, 60, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
+agregarProducto("cuaderno", 400, 80, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 
 const calcularTotal = (cantidad, precio) => {
     let iva = 0.21;

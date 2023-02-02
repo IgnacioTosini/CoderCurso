@@ -663,14 +663,16 @@ main .slideContenedor .barras .active {
   background-color: rgba(0, 162, 255, 0.418);
   padding: 20px;
   width: 250px;
-  height: 360px;
-  max-height: 360px;
+  height: 415px;
+  max-height: 460px;
   border-radius: 5px;
 }
 .containerGridMain .containerMainTienda .containerProducto button {
-  background-color: rgb(104, 50, 205);
+  background-color: rgb(25, 88, 206);
   border-radius: 100px;
   width: 120px;
+  margin: 4px;
+  padding: 2px;
 }
 .containerGridMain .containerMainTienda .containerProducto img {
   min-height: 210px;
@@ -685,6 +687,11 @@ main .slideContenedor .barras .active {
   max-height: 50px;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+.containerGridMain .containerMainTienda .containerProducto .contador {
+  text-align: center;
+  width: 40px;
+  color: black;
 }
 
 /*Parte Footer*/
