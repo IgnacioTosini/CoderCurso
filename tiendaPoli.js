@@ -16,10 +16,10 @@ class Cliente {
     }
 }
 
-function renderProducto(){
+function renderProducto(productosDeLaTienda){
     containerMainTienda.innerHTML = "";
 
-    for (const producto of tienda){
+    for (const producto of productosDeLaTienda){
         const div = document.createElement("div");
         div.className = "containerProducto";
         const pNombre = document.createElement("p");
@@ -57,7 +57,7 @@ function agregarProducto(nombre, precio, stock, cantidad, imagenProducto) {
     const producto = new Producto(nombre, precio, stock, cantidad, imagenProducto);
     producto.nombreProducto = producto.nombreProducto.charAt().toUpperCase() + producto.nombreProducto.slice(1);
     tienda.push(producto);
-    renderProducto();
+    renderProducto(tienda);
 }
 
 let total = 0;
@@ -66,6 +66,7 @@ let continuar = "s";
 const containerMainTienda = document.getElementById("containerMainTienda");
 const tienda = [];
 
+const buscarProducto = document.getElementById("buscadorProducto");
 agregarProducto("remera", 200, 10, 0, "../img/imgRemeraMangaLargaDanza.jpg");
 agregarProducto("buzo", 500, 5, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 agregarProducto("pantalon", 300, 5, 0, "../img/remerasDelPoli.jpg");
@@ -76,6 +77,14 @@ agregarProducto("lapices", 100, 100, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 agregarProducto("goma", 200, 60, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 agregarProducto("cuaderno", 400, 80, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 
+buscarProducto.oninput = () => {
+    const productoBuscado = buscarProducto.value;
+
+    const productosFiltrados = tienda.filter((productos) => {
+        return productos.nombreProducto.toLowerCase().includes(productoBuscado.toLowerCase());
+    })
+    renderProducto(productosFiltrados);
+};
 const calcularTotal = (cantidad, precio) => {
     let iva = 0.21;
     let total = (cantidad * precio) * iva;

@@ -48,4 +48,15 @@
             }
         }
     }
+    .containerBuscador {
+        position: relative;
+        display: flex;
+        width: 220px;
+        height: 50px;
+        top: 44%;
+        left: 6%;
+        background: rgba(0, 68, 255, 0.199);
+        justify-content: center;
+        align-items: center;
+    }
 }
