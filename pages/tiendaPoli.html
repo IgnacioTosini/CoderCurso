@@ -16,6 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="../utils/scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="shortcut icon" href="../img/ESEAN1Bco.png" type="image/x-icon">
     <title>ESEA N° 1 - Polivalente de Arte</title>
 </head>
@@ -61,18 +62,24 @@
             </div>
         </div>
     </header>
-    <main class="containerGridMain">
+    <main class="containerGridMain" id="containerGridMain">
         <div class="containerBuscador">
-            <input type="text" id="buscadorProducto" class="buscaProducto" placeholder="Buscar Producto">
+            <input type="text" id="buscadorProducto" class="buscaProducto" placeholder="Buscar Producto" maxlength="20">
         </div>
-        <div class="containerMainTienda" id="containerMainTienda">
-<!--             <div class="containerProducto">
-                <picture><img src="../img/galeria4.jpeg" alt=""></picture>
-                <p>Soy el nombre del producto</p>
-                <button>-</button>
-                <p>0</p>
-                <button>+</button>
-            </div><-->
+        <p class="errorBusquedaInvisible" id="errorBusquedaInvisible">No se encontro ningun producto para la busqueda realizada</p>
+        <button class="botonAbrir" id="botonAbrir">Abrir Carrito</button>
+        <p class="cantidadEnCarrito" id="cantidadEnCarrito">0</p>
+        <div class="containerMainTienda" id="containerMainTienda"></div>
+        <div class="containerCarritoInvisible" id="containerCarritoInvisible">
+            <button class="botonCerrar" id="botonCerrar">X</button>
+            <h2>Carrito</h2>
+            <div class="containerProdutosComprados" id="containerProdutosComprados">
+                <div class="subContainerCarrito" id="subContainerCarrito"></div>
+            </div>
+            <div class="containerTotalFinal" id="containerTotalFinal"></div>
+            <p class="pTotal">Total:</p>
+            <button class="botonBorrar" id="botonBorrar">Borrar</button>
+            <button class="botonPagar" id="botonPagar">Pagar</button>
         </div>
     </main>
 
@@ -104,6 +111,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../tiendaPoli.js"></script>
 </body>
 </html>

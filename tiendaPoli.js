@@ -16,6 +16,100 @@ class Cliente {
     }
 }
 
+function obtenerCantidadGuardada(nombreProducto){
+    let cantidad = 0;
+
+    const productoEnElCarrito = carrito.find((productoCarrito) => productoCarrito.nombre === nombreProducto);
+
+    if(productoEnElCarrito !== undefined){
+        cantidad = productoEnElCarrito.cantidad;
+    }
+
+    return cantidad;
+}
+
+function leerLs(recuperar){
+    let recuperado = 0;
+
+    const recuperadoLs = localStorage.getItem(recuperar);
+
+    if(recuperadoLs !== null){
+        recuperado = JSON.parse(recuperadoLs);
+    }
+
+    return recuperado;
+}
+
+function leerCarritoLs(){
+    let carrito = [];
+
+    const carritoLs = localStorage.getItem("carrito");
+
+    if(carritoLs !== null){
+        carrito = JSON.parse(carritoLs);
+    }
+
+    return carrito;
+}
+
+function guardarCarrito(){
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("totalFinal", JSON.stringify(totalFinal));
+    localStorage.setItem("cantidadEnCarrito", JSON.stringify(cantidadEnCarrito));
+}
+
+function renderCarrito(){
+    subContainerCarrito.innerHTML = "";
+    containerTotalFinal.innerHTML = "";
+    for (const producto of carrito){
+        const pNombre = document.createElement("p");
+        pNombre.className = "p";
+        pNombre.innerHTML = `${producto.nombre}`;
+        const cantidadProducto = document.createElement("p");
+        cantidadProducto.className = "p";
+        cantidadProducto.innerHTML = `${producto.cantidad}`;
+        const totalProducto = document.createElement("p");
+        totalProducto.className = "p";
+        totalProducto.innerHTML = `$ ${producto.totalProducto}`;
+        subContainerCarrito.append(pNombre, cantidadProducto, totalProducto);
+    }
+    const total = document.createElement("p");
+    total.className = "totalFinal";
+    total.innerHTML = `$${totalFinal}`
+    containerTotalFinal.append(total);
+}
+
+function cambioCarrito(producto, cantidad){
+    const indice = carrito.findIndex((productoCarrito) => productoCarrito.nombre === producto.nombreProducto);
+
+    if(indice === -1 && cantidad != 0){
+        carrito.push({
+            nombre: producto.nombreProducto,
+            cantidad: cantidad,
+            totalProducto: producto.precio * cantidad * 1.21,
+        });
+        totalFinal = calcularTotalFinal(carrito);
+    }else if(cantidad > 0){
+        carrito[indice].cantidad = cantidad;
+        carrito[indice].totalProducto = producto.precio * cantidad * 1.21;
+        totalFinal = calcularTotalFinal(carrito);
+    }else if(cantidad == 0 && producto.nombreProducto){
+        carrito.splice(indice, 1);
+        totalFinal = calcularTotalFinal(carrito);
+    }
+    cantidadEnCarrito.innerHTML = carrito.length;
+    renderCarrito();
+    guardarCarrito();
+}
+
+function calcularTotalFinal(carrito){
+    let total = 0;
+    for(let i = 0; i < carrito.length; i++) {
+        total += carrito[i].totalProducto;
+    }
+    return total;
+}
+
 function renderProducto(productosDeLaTienda){
     containerMainTienda.innerHTML = "";
 
@@ -31,24 +125,23 @@ function renderProducto(productosDeLaTienda){
         const botonMas = document.createElement("button");
         botonMas.className = "button";
         botonMas.innerHTML = "+";
-        botonMas.onclick = () => {if(contador.value < producto.stock) contador.value++;};
+        botonMas.onclick = () => {if(contador.value < producto.stock) {contador.value++; cambioCarrito(producto, contador.value);} if(contador.value == producto.stock){errorCantidad.className = "errorCantidadInvisible errorCantidadVisible";}};
         const contador = document.createElement("input");
         contador.className = "contador";
-        contador.value = 0;
-        contador.onchange = () => {if(contador.value > producto.stock) contador.value = producto.stock};
+        contador.maxLength = "3";
+        contador.value = obtenerCantidadGuardada(producto.nombreProducto);
+        contador.onchange = () => {if(contador.value >= producto.stock){ contador.value = producto.stock; errorCantidad.className = "errorCantidadInvisible errorCantidadVisible";}else {errorCantidad.className = "errorCantidadInvisible";} if(contador.value <= 0) contador.value = 0;}
+        const errorCantidad = document.createElement("p");
+        errorCantidad.className = "errorCantidadInvisible";
+        errorCantidad.innerHTML = "Este es el maximo stock";
         const botonMenos = document.createElement("button");
         botonMenos.className = "button";
         botonMenos.innerHTML = "-";
-        botonMenos.onclick = () => {if(contador.value > 0) contador.value--;};
+        botonMenos.onclick = () => {if(contador.value > 0) {contador.value--; cambioCarrito(producto, contador.value);} if(contador.value < producto.stock){errorCantidad.className = "errorCantidadInvisible";}};
         const agregarProducto = document.createElement("button");
         agregarProducto.innerHTML = "Agregar Producto";
-        agregarProducto.onclick = () => {alert(contador.value)};
-        div.append(pNombre);
-        div.append(img);
-        div.append(botonMas);
-        div.append(contador);
-        div.append(botonMenos);
-        div.append(agregarProducto);
+        agregarProducto.onclick = () => {cambioCarrito(producto, contador.value);};
+        div.append(pNombre, img, botonMas, contador, errorCantidad, botonMenos, agregarProducto);
         containerMainTienda.append(div);
     }
 }
@@ -58,15 +151,27 @@ function agregarProducto(nombre, precio, stock, cantidad, imagenProducto) {
     producto.nombreProducto = producto.nombreProducto.charAt().toUpperCase() + producto.nombreProducto.slice(1);
     tienda.push(producto);
     renderProducto(tienda);
+    renderCarrito();
 }
 
-let total = 0;
-let continuar = "s";
-
-const containerMainTienda = document.getElementById("containerMainTienda");
 const tienda = [];
+const containerMainTienda = document.getElementById("containerMainTienda");
+const carrito = leerCarritoLs();
+const containerProdutosComprados = document.getElementById("containerProdutosComprados");
+const subContainerCarrito = document.getElementById("subContainerCarrito");
+const containerCarrito = document.getElementById("containerCarritoInvisible");
+const containerTotalFinal = document.getElementById("containerTotalFinal");
 
+let totalFinal = leerLs("totalFinal");
 const buscarProducto = document.getElementById("buscadorProducto");
+const errorBusqueda = document.getElementById('errorBusquedaInvisible');
+
+const cantidadEnCarrito = document.getElementById("cantidadEnCarrito");
+const botonAbrir = document.getElementById("botonAbrir");
+const botonCerrar = document.getElementById("botonCerrar");
+const botonBorrar = document.getElementById("botonBorrar");
+const botonPagar = document.getElementById("botonPagar");
+
 agregarProducto("remera", 200, 10, 0, "../img/imgRemeraMangaLargaDanza.jpg");
 agregarProducto("buzo", 500, 5, 0, "../img/imgBuzoPolivalenteDeArte.jpg");
 agregarProducto("pantalon", 300, 5, 0, "../img/remerasDelPoli.jpg");
@@ -82,47 +187,68 @@ buscarProducto.oninput = () => {
 
     const productosFiltrados = tienda.filter((productos) => {
         return productos.nombreProducto.toLowerCase().includes(productoBuscado.toLowerCase());
-    })
-    renderProducto(productosFiltrados);
+    });
+    if(productosFiltrados != ""){
+        renderProducto(productosFiltrados);
+        errorBusqueda.className = "errorBusquedaInvisible";
+    }else {
+        renderProducto(tienda);
+        errorBusqueda.className = "errorBusquedaInvisible errorBusquedaVisible";
+    }
 };
-const calcularTotal = (cantidad, precio) => {
-    let iva = 0.21;
-    let total = (cantidad * precio) * iva;
-    return (cantidad * precio) + total;
-}
 
-const calcularCantidad = (nombre, precio, stock) => {
-    let cantidad = 0;
-    do{
-    cantidad = parseInt(prompt(`El precio de el/la ${nombre} es: ${precio} ¿Cuantas/tos quiere comprar?`));
-    if(cantidad > stock){
-        console.log(`Lo lamento, el stock es de: ${stock}, eliga una menor cantidad.`);
-    }
-    if(stock == 0){
-        console.log(`Ya no hay stock, lo enviaremos al menu`);
-        return 0;
-    }
-    }while(cantidad > stock);
-    return cantidad;
-}
+botonAbrir.onclick = () => {
+    containerCarrito.className = "containerCarritoInvisible containerCarritoVisible";
+};
 
-/* do {
-    console.log(`Los produtos son:`);
-    for (const productos of tienda) {
-        console.log(`${productos.nombreProducto}, el stock es de: ${productos.stock}.`);
-    }
-    let elegido = prompt(`¿Que desea comprar?`);
-    const encontrado = tienda.find((producto) => producto.nombreProducto === elegido)
-    if(encontrado != undefined){
-        let cantidad = calcularCantidad(encontrado.nombreProducto, encontrado.precio, encontrado.stock);
-        encontrado.stock -= cantidad;
-        total += calcularTotal(cantidad, encontrado.precio);
-        alert("Total por ahora es: " + total);
-    }else if(encontrado == undefined){
-        console.log("Lo lamento, no tenemos ese articulo");
-    }
+botonCerrar.onclick = () => {
+    containerCarrito.className = "containerCarritoInvisible";
+};
 
-    continuar = prompt("Escriba 's' si desea continuar comprando");
-} while (continuar == "s" || continuar == "S");
-alert("Adios, espero que le haya gustado el servicio, vuelva pronto");
- */
+botonBorrar.onclick = () => {
+    if(carrito.length != 0){
+        carrito.splice(0, carrito.length)
+        totalFinal = 0;
+        cantidadEnCarrito.innerHTML = 0;
+        localStorage.clear();
+        Toastify({
+            text: "Se ha borrado el contenido del carrito",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+            background: "linear-gradient(to right, rgba(255, 0, 0, 0.808), rgba(85, 0, 0, 0.808))",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
+        renderCarrito();
+        renderProducto(tienda);
+    }
+};
+
+botonPagar.onclick = () => {
+    if(carrito.length != 0){
+        carrito.splice(0, carrito.length)
+        totalFinal = 0;
+        cantidadEnCarrito.innerHTML = 0;
+        localStorage.clear();
+        Toastify({
+            text: "Pago realizado con exito",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
+        renderCarrito();
+        renderProducto(tienda);
+    }
+};

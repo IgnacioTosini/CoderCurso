@@ -653,6 +653,18 @@ main .slideContenedor .barras .active {
   gap: 80px;
   margin: 50px 40px 50px 70px;
 }
+.containerGridMain .containerMainTienda .errorCantidadInvisible {
+  position: absolute;
+  top: 62.5%;
+  left: 15%;
+  font-size: 18px;
+  width: 200px;
+  color: rgb(214, 2, 2);
+  visibility: hidden;
+}
+.containerGridMain .containerMainTienda .errorCantidadVisible {
+  visibility: visible;
+}
 .containerGridMain .containerMainTienda .containerProducto {
   display: flex;
   flex-direction: column;
@@ -673,6 +685,7 @@ main .slideContenedor .barras .active {
   width: 120px;
   margin: 4px;
   padding: 2px;
+  z-index: 1;
 }
 .containerGridMain .containerMainTienda .containerProducto img {
   min-height: 210px;
@@ -696,13 +709,120 @@ main .slideContenedor .barras .active {
 .containerGridMain .containerBuscador {
   position: relative;
   display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 50px;
   top: 44%;
   left: 6%;
   background: rgba(0, 68, 255, 0.199);
-  justify-content: center;
+}
+.containerGridMain .errorBusquedaInvisible {
+  position: absolute;
+  top: 2.2%;
+  left: 23%;
+  color: rgb(190, 0, 0);
+  visibility: hidden;
+}
+.containerGridMain .errorBusquedaVisible {
+  visibility: visible;
+}
+.containerGridMain .cantidadEnCarrito {
+  position: absolute;
+  top: 0.5%;
+  right: 3.5%;
+  width: 15px;
+  text-align: center;
+  background-color: green;
+  border-radius: 40%;
+  z-index: 2;
+}
+.containerGridMain .botonAbrir {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  width: 6%;
+  background-color: #0270ff;
+  border-radius: 40px;
+  z-index: 1;
+}
+.containerGridMain .containerCarritoInvisible {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
   align-items: center;
+  width: 20%;
+  height: 60%;
+  background-color: rgba(40, 121, 226, 0.8078431373);
+  right: 1.5%;
+  top: 22%;
+  border-radius: 50px;
+  visibility: hidden;
+  z-index: 3;
+}
+.containerGridMain .containerCarritoInvisible .containerProdutosComprados {
+  position: relative;
+  height: 75%;
+  overflow: auto;
+}
+.containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
+  margin: 5px;
+  border-bottom: 2px solid;
+  text-align: center;
+}
+.containerGridMain .containerCarritoInvisible h2 {
+  position: relative;
+  text-align: center;
+  width: 85%;
+  border: 3px solid blue;
+  border-radius: 50px;
+  background-color: rgba(0, 68, 255, 0.137);
+}
+.containerGridMain .containerCarritoInvisible .botonCerrar {
+  position: absolute;
+  left: -2%;
+  top: 0%;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 9%;
+  z-index: 1;
+}
+.containerGridMain .containerCarritoInvisible .botonBorrar {
+  position: absolute;
+  width: 30%;
+  top: 90%;
+  left: 3%;
+  background-color: beige;
+  border-radius: 50px;
+}
+.containerGridMain .containerCarritoInvisible .botonPagar {
+  position: absolute;
+  width: 40%;
+  height: 7%;
+  top: 96%;
+  background-color: rgba(255, 0, 0, 0.808);
+  border-radius: 50px;
+}
+.containerGridMain .containerCarritoInvisible .totalFinal {
+  position: absolute;
+  top: 90%;
+  left: 70%;
+}
+.containerGridMain .containerCarritoInvisible .pTotal {
+  position: absolute;
+  top: 90%;
+  left: 45%;
+}
+.containerGridMain .containerCarritoVisible {
+  visibility: visible;
 }
 
 /*Parte Footer*/
