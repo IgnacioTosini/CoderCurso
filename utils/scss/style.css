@@ -962,6 +962,35 @@ main .slideContenedor .barras .active {
     width: 100%;
     height: auto;
   }
+  .containerGridMain .containerCarritoInvisible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    left: 65%;
+    top: 22%;
+  }
+  .containerGridMain .errorBusquedaInvisible {
+    position: absolute;
+    top: 1.4%;
+    left: 36%;
+    font-size: 15px;
+  }
+  .containerGridMain .botonAbrir {
+    position: absolute;
+    top: 1%;
+    right: 4%;
+    width: 10%;
+  }
+  .containerGridMain .cantidadEnCarrito {
+    position: absolute;
+    top: 0.5%;
+    right: 4.5%;
+    width: 15px;
+  }
   main .slideContenedor {
     position: relative;
     width: 100%;
@@ -1029,7 +1058,7 @@ main .slideContenedor .barras .active {
     font-size: 20px;
   }
   .logo,
-.logo2 {
+  .logo2 {
     height: 50px;
     width: 50px;
   }
@@ -1087,7 +1116,7 @@ main .slideContenedor .barras .active {
 }
 @media screen and (max-width: 480px) {
   .logo,
-.logo2 {
+  .logo2 {
     position: absolute;
     height: 50px;
     width: 50px;
@@ -1116,6 +1145,35 @@ main .slideContenedor .barras .active {
     position: absolute;
     top: 38%;
     left: 18%;
+  }
+  .containerGridMain .errorBusquedaInvisible {
+    position: absolute;
+    top: 1.6%;
+    left: 6%;
+    font-size: 13px;
+  }
+  .containerGridMain .botonAbrir {
+    position: absolute;
+    top: 0.5%;
+    right: 6%;
+    width: 15%;
+  }
+  .containerGridMain .cantidadEnCarrito {
+    position: absolute;
+    top: 0.4%;
+    right: 6%;
+    width: 15px;
+  }
+  .containerGridMain .containerCarritoInvisible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    left: 45%;
+    top: 28%;
   }
   .containerGridMain .sectionPrincipal .containerGaleriaIndex {
     position: relative;
@@ -1217,6 +1275,23 @@ main .slideContenedor .barras .active {
     font-size: 15px;
     top: 12px;
   }
+  .containerGridMain .botonAbrir {
+    position: absolute;
+    top: 0.5%;
+    right: 7%;
+    width: 18%;
+  }
+  .containerGridMain .containerCarritoInvisible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+    width: 55%;
+    height: 60%;
+    left: 40%;
+    top: 28%;
+  }
   /*Parte Footer*/
   .containerGridFooter .containerInfoMedio p {
     left: 0%;
@@ -1288,6 +1363,30 @@ main .slideContenedor .barras .active {
   .logo2 {
     right: 10px;
   }
+  .containerGridMain .botonAbrir {
+    position: absolute;
+    top: 0.4%;
+    right: 15%;
+    width: 18%;
+  }
+  .containerGridMain .cantidadEnCarrito {
+    position: absolute;
+    top: 0.3%;
+    right: 14%;
+    width: 15px;
+  }
+  .containerGridMain .containerCarritoInvisible {
+    width: 60%;
+    height: 60%;
+    left: 36%;
+    top: 30%;
+  }
+  .containerGridMain .containerBuscador {
+    width: 212px;
+    height: 50px;
+    top: 44%;
+    left: 3%;
+  }
 }
 @media screen and (max-width: 320px) {
   .containerGridHeader {
@@ -1300,6 +1399,36 @@ main .slideContenedor .barras .active {
   }
   .tituloPrincipal {
     font-size: 15px;
+  }
+  .containerGridMain .containerMainTienda {
+    margin: 50px 40px 50px 40px;
+  }
+  .containerGridMain .botonAbrir {
+    top: 0.4%;
+    right: 8%;
+    width: 20%;
+  }
+  .containerGridMain .cantidadEnCarrito {
+    top: 0.3%;
+    right: 6%;
+    width: 15px;
+  }
+  .containerGridMain .containerCarritoInvisible {
+    width: 60%;
+    height: 60%;
+    left: 36%;
+    top: 30%;
+  }
+  .containerGridMain .containerBuscador {
+    width: 212px;
+    height: 50px;
+    top: 44%;
+    left: 3%;
+  }
+  .containerGridMain .errorBusquedaInvisible {
+    top: 1.6%;
+    left: 1%;
+    font-size: 13px;
   }
   /*Parte Footer*/
   .containerGridFooter {
@@ -1355,4 +1484,4 @@ main .slideContenedor .barras .active {
 .container p:not(.class) para excluir a la clase
 form::placeholder*/
 /*320   480    600    768 y 1023   1024    1200*/
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

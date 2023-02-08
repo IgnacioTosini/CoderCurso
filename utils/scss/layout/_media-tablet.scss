@@ -42,6 +42,32 @@
         position: relative;
         width: 100%;
         height: auto;
+        .containerCarritoInvisible{
+            position: fixed;
+            @include properties-flex(column, none, center);
+            width: 30%;
+            height: 60%;
+            left: 65%;
+            top: 22%;
+        }
+        .errorBusquedaInvisible{
+            position: absolute;
+            top: 1.4%;
+            left: 36%;
+            font-size: 15px;
+        }
+        .botonAbrir {
+            position: absolute;
+            top: 1%;
+            right: 4%;
+            width: 10%;
+        }
+        .cantidadEnCarrito {
+            position: absolute;
+            top: 0.5%;
+            right: 4.5%;
+            width: 15px;
+        }
     }
 
     main .slideContenedor {

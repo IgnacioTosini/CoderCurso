@@ -38,6 +38,32 @@
                 left: 18%;
             }
         }
+        .errorBusquedaInvisible{
+            position: absolute;
+            top: 1.6%;
+            left: 6%;
+            font-size: 13px;
+        }
+        .botonAbrir {
+            position: absolute;
+            top: 0.5%;
+            right: 6%;
+            width: 15%;
+        }
+        .cantidadEnCarrito {
+            position: absolute;
+            top: 0.4%;
+            right: 6%;
+            width: 15px;
+        }
+        .containerCarritoInvisible{
+            position: fixed;
+            @include properties-flex(column, none, center);
+            width: 50%;
+            height: 60%;
+            left: 45%;
+            top: 28%;
+        }
     }
 
     .containerGridMain{
@@ -164,6 +190,20 @@
                 }
             }
         }
+        .botonAbrir {
+            position: absolute;
+            top: 0.5%;
+            right: 7%;
+            width: 18%;
+        }
+        .containerCarritoInvisible{
+            position: fixed;
+            @include properties-flex(column, none, center);
+            width: 55%;
+            height: 60%;
+            left: 40%;
+            top: 28%;
+        }
     }
 
     /*Parte Footer*/
@@ -256,7 +296,32 @@
     .logo2 {
         right: 10px;
     }
-
+    .containerGridMain{
+        .botonAbrir {
+            position: absolute;
+            top: 0.4%;
+            right: 15%;
+            width: 18%;
+        }
+        .cantidadEnCarrito {
+            position: absolute;
+            top: 0.3%;
+            right: 14%;
+            width: 15px;
+        }
+        .containerCarritoInvisible{
+            width: 60%;
+            height: 60%;
+            left: 36%;
+            top: 30%;
+        }
+        .containerBuscador {
+            width: 212px;
+            height: 50px;
+            top: 44%;
+            left: 3%;
+        }
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -277,6 +342,38 @@
         font-size: 15px;
     }
 
+    .containerGridMain{
+        .containerMainTienda {
+            margin: 50px 40px 50px 40px;
+        }
+        .botonAbrir {
+            top: 0.4%;
+            right: 8%;
+            width: 20%;
+        }
+        .cantidadEnCarrito {
+            top: 0.3%;
+            right: 6%;
+            width: 15px;
+        }
+        .containerCarritoInvisible{
+            width: 60%;
+            height: 60%;
+            left: 36%;
+            top: 30%;
+        }
+        .containerBuscador {
+            width: 212px;
+            height: 50px;
+            top: 44%;
+            left: 3%;
+        }
+        .errorBusquedaInvisible{
+            top: 1.6%;
+            left: 1%;
+            font-size: 13px;
+        }
+    }
     /*Parte Footer*/
     .containerGridFooter {
         @include properties-grid(1fr, auto);
