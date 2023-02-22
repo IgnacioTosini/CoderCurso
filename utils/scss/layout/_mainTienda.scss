@@ -113,11 +113,19 @@
                 overflow: auto;
                 .subContainerCarrito{
                     position: relative;
-                    @include properties-grid(3, 1);
+                    @include properties-grid(4, 1);
                     p{
                         margin: 5px;
                         border-bottom: 2px solid;
                         text-align: center;
+                }
+                .eliminarProducto{
+                    position: relative;
+                    background-color: #ff4343;
+                    width: 80%;
+                    height: 80%;
+                    top: 15%;
+                    border-radius: 20px;
                 }
             }
         }

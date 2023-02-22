@@ -1,0 +1,65 @@
+[
+    {
+        "nombreProducto": "remera",
+        "precio": 200,
+        "stock": 10,
+        "imagenProducto": "../img/imgRemeraMangaLargaDanza.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "buzo",
+        "precio": 500,
+        "stock": 7,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "pantalon",
+        "precio": 300,
+        "stock": 5,
+        "imagenProducto": "../img/remerasDelPoli.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "campera",
+        "precio": 800,
+        "stock": 9,
+        "imagenProducto": "../img/visualesUno.jpeg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "mochila",
+        "precio": 1200,
+        "stock": 3,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "calculadora",
+        "precio": 2000,
+        "stock": 13,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "lapices",
+        "precio": 100,
+        "stock": 100,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "goma",
+        "precio": 200,
+        "stock": 60,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombreProducto": "cuaderno",
+        "precio": 400,
+        "stock": 80,
+        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "cantidad": 0
+    }
+]

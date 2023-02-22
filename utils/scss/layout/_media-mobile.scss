@@ -38,41 +38,54 @@
                 left: 18%;
             }
         }
-        .errorBusquedaInvisible{
+
+        .errorBusquedaInvisible {
             position: absolute;
             top: 1.6%;
             left: 6%;
             font-size: 13px;
         }
+
         .botonAbrir {
             position: absolute;
             top: 0.5%;
             right: 6%;
             width: 15%;
         }
+
         .cantidadEnCarrito {
             position: absolute;
             top: 0.4%;
             right: 6%;
             width: 15px;
         }
-        .containerCarritoInvisible{
+
+        .containerCarritoInvisible {
             position: fixed;
             @include properties-flex(column, none, center);
             width: 50%;
             height: 60%;
             left: 45%;
             top: 28%;
+
+            .containerProdutosComprados {
+                .subContainerCarrito {
+                    p {
+                        font-size: 12.5px;
+                    }
+                }
+            }
         }
     }
 
-    .containerGridMain{
-        .sectionPrincipal{
+    .containerGridMain {
+        .sectionPrincipal {
             .containerGaleriaIndex {
                 position: relative;
                 height: auto;
                 width: 100%;
             }
+
             .containerMap {
                 position: relative;
                 margin: 20px;
@@ -190,13 +203,15 @@
                 }
             }
         }
+
         .botonAbrir {
             position: absolute;
             top: 0.5%;
             right: 7%;
             width: 18%;
         }
-        .containerCarritoInvisible{
+
+        .containerCarritoInvisible {
             position: fixed;
             @include properties-flex(column, none, center);
             width: 55%;
@@ -264,6 +279,18 @@
         ;
     }
 
+    .containerGridMain {
+        .containerCarritoInvisible {
+            .containerProdutosComprados {
+                .subContainerCarrito {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
     .contenedorFlechaArriba {
         position: fixed;
         width: 9%;
@@ -296,25 +323,29 @@
     .logo2 {
         right: 10px;
     }
-    .containerGridMain{
+
+    .containerGridMain {
         .botonAbrir {
             position: absolute;
             top: 0.4%;
             right: 15%;
             width: 18%;
         }
+
         .cantidadEnCarrito {
             position: absolute;
             top: 0.3%;
             right: 14%;
             width: 15px;
         }
-        .containerCarritoInvisible{
+
+        .containerCarritoInvisible {
             width: 60%;
             height: 60%;
             left: 36%;
             top: 30%;
         }
+
         .containerBuscador {
             width: 212px;
             height: 50px;
@@ -342,38 +373,52 @@
         font-size: 15px;
     }
 
-    .containerGridMain{
+    .containerGridMain {
         .containerMainTienda {
             margin: 50px 40px 50px 40px;
         }
+
         .botonAbrir {
             top: 0.4%;
             right: 8%;
             width: 20%;
         }
+
         .cantidadEnCarrito {
             top: 0.3%;
             right: 6%;
             width: 15px;
         }
-        .containerCarritoInvisible{
+
+        .containerCarritoInvisible {
             width: 60%;
             height: 60%;
             left: 36%;
             top: 30%;
+
+            .containerProdutosComprados {
+                .subContainerCarrito {
+                    p {
+                        font-size: 11.6px;
+                    }
+                }
+            }
         }
+
         .containerBuscador {
             width: 212px;
             height: 50px;
             top: 44%;
             left: 3%;
         }
-        .errorBusquedaInvisible{
+
+        .errorBusquedaInvisible {
             top: 1.6%;
             left: 1%;
             font-size: 13px;
         }
     }
+
     /*Parte Footer*/
     .containerGridFooter {
         @include properties-grid(1fr, auto);

@@ -49,6 +49,17 @@
             height: 60%;
             left: 65%;
             top: 22%;
+            .containerProdutosComprados{
+                .subContainerCarrito{
+                    .eliminarProducto {
+                        width: 60%;
+                        height: 55%;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
         }
         .errorBusquedaInvisible{
             position: absolute;

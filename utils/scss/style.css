@@ -770,13 +770,21 @@ main .slideContenedor .barras .active {
 .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
 .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
   margin: 5px;
   border-bottom: 2px solid;
   text-align: center;
+}
+.containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito .eliminarProducto {
+  position: relative;
+  background-color: #ff4343;
+  width: 80%;
+  height: 80%;
+  top: 15%;
+  border-radius: 20px;
 }
 .containerGridMain .containerCarritoInvisible h2 {
   position: relative;
@@ -926,6 +934,9 @@ main .slideContenedor .barras .active {
   .containerGridFooter .containerInfoMedio {
     right: 30%;
   }
+  .containerGridMain .containerCarritoInvisible {
+    width: 25%;
+  }
 }
 @media screen and (max-width: 768px) {
   .flechita2:before {
@@ -972,6 +983,13 @@ main .slideContenedor .barras .active {
     height: 60%;
     left: 65%;
     top: 22%;
+  }
+  .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito .eliminarProducto {
+    width: 60%;
+    height: 55%;
+  }
+  .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
+    font-size: 14px;
   }
   .containerGridMain .errorBusquedaInvisible {
     position: absolute;
@@ -1175,6 +1193,9 @@ main .slideContenedor .barras .active {
     left: 45%;
     top: 28%;
   }
+  .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
+    font-size: 12.5px;
+  }
   .containerGridMain .sectionPrincipal .containerGaleriaIndex {
     position: relative;
     height: auto;
@@ -1339,6 +1360,9 @@ main .slideContenedor .barras .active {
     grid-template-rows: repeat(repeat(3, 1fr), 1fr);
     grid-template-areas: "tituloPrincipal" "containerMenu" "containerMenu";
   }
+  .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
+    font-size: 12px;
+  }
   .contenedorFlechaArriba {
     position: fixed;
     width: 9%;
@@ -1418,6 +1442,9 @@ main .slideContenedor .barras .active {
     height: 60%;
     left: 36%;
     top: 30%;
+  }
+  .containerGridMain .containerCarritoInvisible .containerProdutosComprados .subContainerCarrito p {
+    font-size: 11.6px;
   }
   .containerGridMain .containerBuscador {
     width: 212px;
