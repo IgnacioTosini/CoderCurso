@@ -17,49 +17,49 @@
         "nombreProducto": "pantalon",
         "precio": 300,
         "stock": 5,
-        "imagenProducto": "../img/remerasDelPoli.jpg",
+        "imagenProducto": "../img/pantalon.jpg",
         "cantidad": 0
     },
     {
         "nombreProducto": "campera",
         "precio": 800,
         "stock": 9,
-        "imagenProducto": "../img/visualesUno.jpeg",
+        "imagenProducto": "../img/campera.jpg",
         "cantidad": 0
     },
     {
         "nombreProducto": "mochila",
         "precio": 1200,
         "stock": 3,
-        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "imagenProducto": "../img/mochila.jpg",
         "cantidad": 0
     },
     {
         "nombreProducto": "calculadora",
         "precio": 2000,
         "stock": 13,
-        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "imagenProducto": "../img/calculadora.png",
         "cantidad": 0
     },
     {
         "nombreProducto": "lapices",
         "precio": 100,
         "stock": 100,
-        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "imagenProducto": "../img/lapices.jpg",
         "cantidad": 0
     },
     {
         "nombreProducto": "goma",
         "precio": 200,
         "stock": 60,
-        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "imagenProducto": "../img/gomaDeBorrar.jpg",
         "cantidad": 0
     },
     {
         "nombreProducto": "cuaderno",
         "precio": 400,
         "stock": 80,
-        "imagenProducto": "../img/imgBuzoPolivalenteDeArte.jpg",
+        "imagenProducto": "../img/cuaderno.jpg",
         "cantidad": 0
     }
 ]

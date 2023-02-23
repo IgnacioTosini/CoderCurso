@@ -8,13 +8,14 @@ class Producto {
     }
 }
 
-class Cliente {
+/* class Cliente { Esta clase por el momento la comento ya que en un futuro me gustaria hacer un inicio de sesion pero al no poder guardar los datos no lo hago.
     constructor(nombre, apellido, contrasenia) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.contrasenia = contrasenia;
     }
 }
+ */
 
 function obtenerCantidadGuardada(nombreProducto) {
     let cantidad = 0;
@@ -186,31 +187,22 @@ function revisionStock() { //Esta funcion no tiene mucho sentido ya que al recar
     }
 }
 
-/* function agregarProducto(nombre, precio, stock, cantidad, imagenProducto) {
-    const producto = new Producto(nombre, precio, stock, cantidad, imagenProducto);
-    producto.nombreProducto = producto.nombreProducto.charAt().toUpperCase() + producto.nombreProducto.slice(1);
-    tienda.push(producto);
-    renderProducto(tienda);
-    renderCarrito();
-} */
-
 let tienda = [];
+let carrito = leerCarritoLs();
 cargarProductosEnTienda();
 
 //Los Diferentes contenedores del Html a utilizar.
 const containerMainTienda = document.getElementById("containerMainTienda");
-let carrito = leerCarritoLs();
 const containerProdutosComprados = document.getElementById("containerProdutosComprados");
 const subContainerCarrito = document.getElementById("subContainerCarrito");
 const containerCarrito = document.getElementById("containerCarritoInvisible");
 const containerTotalFinal = document.getElementById("containerTotalFinal");
 
 let totalFinal = leerLs("totalFinal");
-
 const buscarProducto = document.getElementById("buscadorProducto");
 const errorBusqueda = document.getElementById('errorBusquedaInvisible');
-
 let cantidadEnCarrito = document.getElementById("cantidadEnCarrito");
+
 //Botones utilizados.
 const botonAbrir = document.getElementById("botonAbrir");
 const botonCerrar = document.getElementById("botonCerrar");
