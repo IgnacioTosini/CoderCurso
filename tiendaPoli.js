@@ -1,4 +1,4 @@
-class Producto {
+/* class Producto {
     constructor(nombreProducto, precio, stock, cantidad, imagenProducto) {
         this.nombreProducto = nombreProducto;
         this.precio = precio;
@@ -6,7 +6,7 @@ class Producto {
         this.imagenProducto = imagenProducto;
         this.cantidad = cantidad;
     }
-}
+} */
 
 /* class Cliente { Esta clase por el momento la comento ya que en un futuro me gustaria hacer un inicio de sesion pero al no poder guardar los datos no lo hago.
     constructor(nombre, apellido, contrasenia) {
